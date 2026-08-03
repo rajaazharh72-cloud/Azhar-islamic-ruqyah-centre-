@@ -1,0 +1,453 @@
+/* ==========================================================================
+   Masnoon Duas — the Dua Book reading experience
+   Extends the site design system (base.css tokens + components.css). Adds the
+   cover, the two-column reading layout, chapter/dua typography, the reading
+   toolbar, and a print stylesheet that yields a clean A4 PDF via the browser.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Reading progress bar (fixed, top)
+   -------------------------------------------------------------------------- */
+.book-progress {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  height: 3px;
+  z-index: 120;
+  background: transparent;
+  pointer-events: none;
+}
+.book-progress__bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--gold-500), var(--gold-300));
+  box-shadow: 0 0 12px -2px rgba(201, 162, 39, 0.8);
+  transition: width 120ms linear;
+}
+
+/* --------------------------------------------------------------------------
+   2. Cover
+   -------------------------------------------------------------------------- */
+.book-cover {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: calc(var(--nav-h) + var(--sp-8)) var(--gutter) var(--sp-8);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 38%, rgba(46, 143, 119, 0.22), transparent 68%),
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(201, 162, 39, 0.12), transparent 70%),
+    linear-gradient(170deg, var(--emerald-900), var(--ink-900) 60%);
+}
+.book-cover__pattern {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  color: var(--gold-500);
+  opacity: 0.06;
+  -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 45%, transparent 22%, #000 100%);
+          mask-image: radial-gradient(ellipse 75% 75% at 50% 45%, transparent 22%, #000 100%);
+}
+.book-cover__pattern svg { width: 100%; height: 100%; }
+.book-cover__frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-5);
+  max-width: 40rem;
+  padding: clamp(1.5rem, 1rem + 3vw, 3.5rem);
+  border-radius: var(--r-arch);
+  background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
+  box-shadow:
+    inset 0 0 0 1px var(--line-gold-hi),
+    inset 0 0 0 6px rgba(201, 162, 39, 0.06),
+    var(--shadow-lg);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+.book-cover__logo { width: clamp(80px, 12vw, 110px); height: auto; border-radius: 50%;
+  filter: drop-shadow(0 8px 28px rgba(201, 162, 39, 0.4)); }
+.book-cover__org {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-gold);
+}
+.book-cover__ar {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  font-size: clamp(2.4rem, 1.6rem + 4vw, 4rem);
+  line-height: 1.8;
+  color: var(--gold-200);
+  text-shadow: 0 0 50px rgba(201, 162, 39, 0.35);
+  padding-block: 0.15em;
+}
+.book-cover__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--ivory);
+}
+.book-cover__sub {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-lg);
+  color: var(--gold-200);
+}
+.book-cover__rule {
+  width: min(100%, 240px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-gold-hi), transparent);
+}
+.book-cover__edition {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.book-cover__actions { display: flex; flex-wrap: wrap; gap: var(--sp-4); justify-content: center; margin-top: var(--sp-3); }
+html[data-lang="ur"] :is(.book-cover__org, .book-cover__edition) { text-transform: none; letter-spacing: normal; }
+html[data-lang="ur"] .book-cover__title { font-family: var(--font-urdu); line-height: 1.9; }
+
+/* --------------------------------------------------------------------------
+   3. Reading toolbar (sticky, below navbar)
+   -------------------------------------------------------------------------- */
+.book-toolbar {
+  position: sticky;
+  inset-block-start: var(--nav-h);
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--gutter);
+  background: rgba(8, 11, 20, 0.82);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+          backdrop-filter: blur(18px) saturate(150%);
+  box-shadow: 0 1px 0 0 var(--line-gold);
+}
+.book-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex: 1;
+  min-width: 0;
+  max-width: 420px;
+  padding: 0 var(--sp-4);
+  min-height: 44px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 0 1px var(--line-soft);
+}
+.book-search:focus-within { box-shadow: inset 0 0 0 1px var(--line-gold-hi); background: rgba(201,162,39,0.07); }
+.book-search svg { width: 18px; height: 18px; flex: none; color: var(--gold-400); }
+.book-search input { flex: 1; min-width: 0; background: none; border: 0; outline: none; color: var(--text); font-size: var(--fs-sm); }
+.book-search input::placeholder { color: var(--text-dim); }
+.book-tools { display: flex; align-items: center; gap: var(--sp-2); margin-inline-start: auto; }
+.book-tools .icon-btn { width: 42px; height: 42px; }
+.book-tools .icon-btn.is-on { color: var(--gold-200); box-shadow: inset 0 0 0 1px var(--line-gold-hi); }
+
+/* --------------------------------------------------------------------------
+   4. Reading layout: sticky TOC + content
+   -------------------------------------------------------------------------- */
+.book-layout {
+  display: grid;
+  gap: clamp(1.5rem, 1rem + 3vw, 3.5rem);
+  max-width: var(--shell-wide);
+  margin-inline: auto;
+  padding: var(--sp-8) var(--gutter) var(--sp-9);
+}
+@media (min-width: 960px) {
+  .book-layout { grid-template-columns: 260px minmax(0, 1fr); align-items: start; }
+}
+.book-toc {
+  position: sticky;
+  inset-block-start: calc(var(--nav-h) + 68px);
+  max-height: calc(100vh - var(--nav-h) - 90px);
+  overflow-y: auto;
+  padding-inline-end: var(--sp-3);
+}
+.book-toc__label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-gold);
+  margin-bottom: var(--sp-4);
+}
+.book-toc ol { counter-reset: toc; display: flex; flex-direction: column; gap: 2px; }
+.book-toc a {
+  display: flex;
+  gap: var(--sp-3);
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--r-sm);
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  color: var(--text-muted);
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.book-toc a::before {
+  counter-increment: toc;
+  content: counter(toc, decimal-leading-zero);
+  flex: none;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.72em;
+  color: var(--gold-500);
+  padding-top: 0.2em;
+}
+.book-toc a:hover { background: rgba(255,255,255,0.04); color: var(--ivory); }
+.book-toc a[aria-current="true"] { background: rgba(201,162,39,0.12); color: var(--gold-200); box-shadow: inset 0 0 0 1px var(--line-gold); }
+html[data-lang="ur"] .book-toc__label { letter-spacing: normal; text-transform: none; }
+
+/* Mobile: TOC collapses into a details disclosure above the content */
+.book-toc-mobile { display: none; }
+@media (max-width: 959px) {
+  .book-toc { display: none; }
+  .book-toc-mobile { display: block; margin-bottom: var(--sp-5); }
+  .book-toc-mobile > summary {
+    display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3);
+    cursor: pointer; list-style: none; min-height: 48px; padding: 0 var(--sp-4);
+    border-radius: var(--r-md); background: rgba(255,255,255,0.03);
+    box-shadow: inset 0 0 0 1px var(--line-gold);
+    font-size: var(--fs-sm); font-weight: 600; color: var(--gold-200);
+  }
+  .book-toc-mobile > summary::-webkit-details-marker { display: none; }
+  .book-toc-mobile[open] > summary { margin-bottom: var(--sp-2); }
+  .book-toc-mobile .book-toc { display: block; position: static; max-height: none; }
+}
+
+/* --------------------------------------------------------------------------
+   5. Chapters & duas
+   -------------------------------------------------------------------------- */
+.book-content { min-width: 0; }
+
+.book-intro { margin-bottom: var(--sp-9); }
+.book-intro h2 { margin-bottom: var(--sp-4); }
+.book-intro p { color: var(--text-muted); max-width: 64ch; margin-bottom: var(--sp-4); }
+.book-intro .lede { color: var(--text); }
+
+.chapter { scroll-margin-top: calc(var(--nav-h) + 80px); margin-bottom: var(--sp-9); }
+.chapter__head { text-align: center; margin-bottom: var(--sp-7); }
+.chapter__num {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--gold-500);
+}
+.chapter__title { font-size: var(--fs-xl); color: var(--gold-200); margin-top: var(--sp-2); }
+.chapter__intro { color: var(--text-muted); max-width: 60ch; margin: var(--sp-3) auto 0; }
+.chapter__divider { width: min(100%, 320px); margin: var(--sp-4) auto 0; opacity: 0.5; color: var(--gold-500); }
+.chapter__divider svg { width: 100%; height: auto; }
+html[data-lang="ur"] :is(.chapter__num, .chapter__title) { letter-spacing: normal; text-transform: none; }
+html[data-lang="ur"] .chapter__title { font-family: var(--font-urdu); line-height: 1.9; }
+
+.dua {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding: clamp(1.4rem, 1rem + 1.6vw, 2.4rem);
+  border-radius: var(--r-lg);
+  background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015) 45%, rgba(255,255,255,0.03));
+  box-shadow: inset 0 0 0 1px var(--line-gold), inset 0 1px 0 0 rgba(255,255,255,0.07), var(--shadow-md);
+  scroll-margin-top: calc(var(--nav-h) + 80px);
+}
+.dua + .dua { margin-top: clamp(1rem, 0.6rem + 1.4vw, 1.75rem); }
+
+.dua__label {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--sp-3);
+}
+.dua__name { font-family: var(--font-display); font-size: var(--fs-md); font-weight: 600; color: var(--ivory); }
+html[data-lang="ur"] .dua__name { font-family: var(--font-urdu); line-height: 1.9; }
+.dua__badges { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-inline-start: auto; }
+
+.dua__ar {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  unicode-bidi: isolate;
+  font-size: var(--fs-ar-md);
+  line-height: 2.3;
+  color: var(--gold-100);
+  text-align: center;
+  padding-block: 0.3em;
+  text-shadow: 0 0 50px rgba(201, 162, 39, 0.2);
+}
+.dua__tr { font-size: var(--fs-xs); font-style: italic; color: var(--text-dim); text-align: center; }
+.dua__rule { width: 100%; max-width: 200px; height: 1px; margin-inline: auto; background: linear-gradient(90deg, transparent, var(--line-gold), transparent); }
+
+.dua__body { display: flex; flex-direction: column; gap: var(--sp-3); }
+.dua__trans { font-size: var(--fs-sm); line-height: 1.7; color: var(--text-muted); }
+.dua__trans--ur { font-family: var(--font-urdu); direction: rtl; text-align: right; line-height: var(--lh-urdu); }
+.dua__note { font-size: var(--fs-sm); line-height: 1.7; color: var(--text-dim); }
+.dua__note--ur { font-family: var(--font-urdu); direction: rtl; text-align: right; line-height: var(--lh-urdu); }
+
+.dua__meta { display: flex; flex-wrap: wrap; gap: var(--sp-3) var(--sp-5); padding-top: var(--sp-3); border-top: 1px solid var(--line-soft); }
+.dua__meta div { display: flex; flex-direction: column; gap: 0.15em; }
+.dua__meta dt { font-size: 0.6rem; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--text-dim); }
+.dua__meta dd { font-size: var(--fs-xs); color: var(--text-muted); }
+html[data-lang="ur"] .dua__meta dt { letter-spacing: normal; text-transform: none; }
+html[data-lang="ur"] .dua__meta dd { font-family: var(--font-urdu); line-height: 1.8; }
+
+/* Sources are standard collection names + numbers — kept in the Latin face and
+   LTR in both languages, as such citations conventionally appear. */
+.dua__src {
+  font-size: 0.72rem; color: var(--text-gold); font-weight: 600;
+  letter-spacing: 0.02em;
+  font-family: var(--font-body-latin, "Inter", ui-sans-serif, sans-serif);
+  direction: ltr; text-align: start;
+}
+html[data-lang="ur"] .dua__src { letter-spacing: normal; }
+
+/* Language toggle for book content (Arabic always shows). Every bilingual span
+   carries data-en / data-ur; these rules live in book.css so they apply on the
+   book page only. The transliteration shows in English mode only. */
+html[data-lang="en"] [data-ur] { display: none; }
+html[data-lang="ur"] [data-en] { display: none; }
+html[data-lang="ur"] .dua__tr { display: none; }
+
+/* Chapter prev/next */
+.chapter__nav { display: flex; justify-content: space-between; gap: var(--sp-4); margin-top: var(--sp-6); }
+.chapter__nav a {
+  display: inline-flex; align-items: center; gap: var(--sp-3);
+  padding: 0.7rem 1.2rem; min-height: 48px; border-radius: 999px;
+  font-size: var(--fs-xs); color: var(--text-muted);
+  box-shadow: inset 0 0 0 1px var(--line-soft);
+  transition: box-shadow var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.chapter__nav a:hover { color: var(--gold-200); box-shadow: inset 0 0 0 1px var(--line-gold-hi); }
+.chapter__nav a[hidden] { visibility: hidden; }
+.chapter__nav svg { width: 16px; height: 16px; }
+
+/* Back to top */
+.book-top {
+  position: fixed;
+  inset-inline-end: clamp(1rem, 0.5rem + 1.6vw, 2rem);
+  inset-block-end: clamp(1rem, 0.5rem + 1.6vw, 2rem);
+  z-index: 85;
+  display: grid; place-items: center;
+  width: 48px; height: 48px; border-radius: 50%;
+  color: var(--ink-950);
+  background: linear-gradient(135deg, var(--gold-300), var(--gold-500));
+  box-shadow: 0 0 0 1px rgba(248,236,201,0.6), 0 12px 34px -12px rgba(201,162,39,0.8);
+  opacity: 0; visibility: hidden; translate: 0 12px;
+  transition: opacity var(--dur-slow) var(--ease-out), translate var(--dur-slow) var(--ease-out), visibility 0s linear var(--dur-slow);
+}
+.book-top.is-shown { opacity: 1; visibility: visible; translate: 0 0; transition-delay: 0s; }
+.book-top svg { width: 22px; height: 22px; rotate: 180deg; }
+
+/* Toast (bookmark / share / print hints) */
+.book-toast {
+  position: fixed;
+  inset-block-end: clamp(1rem, 0.5rem + 1.6vw, 2rem);
+  inset-inline: 0;
+  margin-inline: auto;
+  width: max-content;
+  max-width: calc(100% - 2 * var(--gutter));
+  z-index: 130;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  font-size: var(--fs-xs);
+  color: var(--ink-950);
+  background: linear-gradient(135deg, var(--gold-200), var(--gold-400));
+  box-shadow: var(--shadow-lg);
+  opacity: 0; visibility: hidden; translate: 0 10px;
+  transition: opacity var(--dur-mid) var(--ease-out), translate var(--dur-mid) var(--ease-out), visibility 0s linear var(--dur-mid);
+}
+.book-toast.is-on { opacity: 1; visibility: visible; translate: 0 0; transition-delay: 0s; }
+.book-toast button {
+  cursor: pointer;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.72rem;
+  color: var(--gold-100);
+  background: var(--ink-900);
+}
+
+/* Search: dim non-matching duas */
+.dua.is-hidden { display: none; }
+.chapter.is-hidden { display: none; }
+mark.book-hit { background: rgba(201,162,39,0.35); color: var(--gold-100); border-radius: 2px; padding: 0 2px; }
+.book-noresults { text-align: center; color: var(--text-muted); padding: var(--sp-8) 0; }
+
+/* --------------------------------------------------------------------------
+   6. Reading (light) theme — toggled on the book page only
+   -------------------------------------------------------------------------- */
+html[data-book-theme="light"] body.book-body {
+  background: #f6f1e4;
+  color: #2a2418;
+}
+html[data-book-theme="light"] .book-toolbar { background: rgba(246,241,228,0.9); box-shadow: 0 1px 0 0 rgba(150,120,40,0.3); }
+html[data-book-theme="light"] .book-search { background: rgba(0,0,0,0.03); box-shadow: inset 0 0 0 1px rgba(150,120,40,0.25); }
+html[data-book-theme="light"] .book-search input { color: #2a2418; }
+html[data-book-theme="light"] .dua {
+  background: #fffdf7;
+  box-shadow: inset 0 0 0 1px rgba(150,120,40,0.28), 0 8px 30px -18px rgba(80,60,20,0.4);
+}
+html[data-book-theme="light"] .dua__ar { color: #6b5310; text-shadow: none; }
+html[data-book-theme="light"] .dua__name { color: #2a2418; }
+html[data-book-theme="light"] .dua__trans { color: #4a4230; }
+html[data-book-theme="light"] .dua__note { color: #6a6250; }
+html[data-book-theme="light"] .dua__src { color: #8a6d14; }
+html[data-book-theme="light"] .dua__meta dd { color: #4a4230; }
+html[data-book-theme="light"] .chapter__title { color: #6b5310; }
+html[data-book-theme="light"] .book-toc a { color: #4a4230; }
+html[data-book-theme="light"] .book-toc a[aria-current="true"] { background: rgba(150,120,40,0.12); color: #6b5310; }
+html[data-book-theme="light"] .book-intro p { color: #4a4230; }
+html[data-book-theme="light"] .nav.is-stuck { background: rgba(246,241,228,0.9); }
+
+/* --------------------------------------------------------------------------
+   7. Print → A4 PDF
+   Hide chrome, show only the current language, break each chapter to a page,
+   add running headers/footers and page numbers where the browser supports it.
+   -------------------------------------------------------------------------- */
+@page {
+  size: A4;
+  margin: 20mm 16mm 18mm;
+}
+@media print {
+  :root { --nav-h: 0px; }
+  .nav, .book-toolbar, .book-progress, .book-top, .book-toc, .book-toc-mobile,
+  .chapter__nav, .fab, .book-cover__actions, .skip-link, .book-cover__pattern,
+  .chapter__divider { display: none !important; }
+
+  html, body.book-body { background: #fff !important; color: #1a1508 !important; }
+
+  .book-cover { min-height: auto; page-break-after: always; background: #fff !important; padding: 30mm 0; }
+  .book-cover__frame { box-shadow: none; border: 2px solid #b8941f; backdrop-filter: none; }
+  .book-cover__ar, .book-cover__title { color: #6b5310 !important; text-shadow: none; }
+  .book-cover__sub, .book-cover__org, .book-cover__edition { color: #4a4230 !important; }
+
+  .book-layout { display: block; max-width: none; padding: 0; }
+  .book-intro { page-break-after: always; }
+  .chapter { page-break-before: always; margin: 0; }
+  .chapter__title { color: #6b5310 !important; }
+
+  .dua {
+    background: #fff !important;
+    box-shadow: none !important;
+    border: 1px solid #d8c99a;
+    page-break-inside: avoid;
+    margin-bottom: 6mm;
+  }
+  .dua__ar { color: #4a3a08 !important; text-shadow: none; }
+  .dua__name { color: #1a1508 !important; }
+  .dua__trans, .dua__note, .dua__meta dd { color: #2a2418 !important; }
+  .dua__src { color: #6b5310 !important; }
+
+  /* Running header + page number (supported in Chromium print) */
+  @page { @top-center { content: "Masnoon Duas — Azhar Islamic Ruqyah Centre"; }
+          @bottom-center { content: counter(page); } }
+
+  a[href]::after { content: ""; } /* don't print URLs after links */
+}

@@ -319,7 +319,7 @@
   box-shadow: 0 0 0 1px rgba(201, 162, 39, 0.35);
 }
 
-.brand__text { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+.brand__text { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; overflow: hidden; }
 
 .brand__name {
   font-family: var(--font-display);
@@ -328,6 +328,10 @@
   letter-spacing: 0.01em;
   color: var(--ivory);
   white-space: nowrap;
+  /* Truncate rather than force the navbar wider than the viewport on very
+     narrow screens; ample space on larger screens means it never clips there. */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .brand__sub {
