@@ -49,6 +49,9 @@ foreach ($ch in $chs) {
     [void]$chapters.AppendLine("      <p class=""dua__trans"" data-en lang=""en"">$(Esc $d.en)</p>")
     [void]$chapters.AppendLine("      <p class=""dua__trans dua__trans--ur"" data-ur lang=""ur"" dir=""rtl"">$(Esc $d.ur)</p>")
     [void]$chapters.AppendLine("    </div>")
+    if ($d.note_en -or $d.note_ur) {
+      [void]$chapters.AppendLine("    <p class=""dua__note"">$(Pair $d.note_en $d.note_ur)</p>")
+    }
     [void]$chapters.AppendLine("    <dl class=""dua__meta"">")
     [void]$chapters.AppendLine("      <div><dt>$(Pair $ui.when_en $ui.when_ur)</dt><dd>$(Pair $d.when_en $d.when_ur)</dd></div>")
     if ($d.reps_en) {
