@@ -1,0 +1,11 @@
+# Keep the deployment to the site itself. These are version-controlled in
+# GitHub but must not be served on the production domain.
+scripts/
+design/
+tools/
+.claude/
+*.ps1
+*.cmd
+__tmp_pattern_check.html
+cf-*.log
+cf-*.err

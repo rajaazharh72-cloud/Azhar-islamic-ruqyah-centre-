@@ -1,0 +1,16 @@
+# Local dev tooling — never deploy, never commit the 54 MB tunnel binary
+tools/
+
+# Editor / harness config
+.claude/
+
+# Scratch left over from earlier sessions
+__tmp_pattern_check.html
+
+# Tunnel logs and OS junk
+cf-*.log
+cf-*.err
+*.out
+Thumbs.db
+Desktop.ini
+.DS_Store

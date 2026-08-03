@@ -1,0 +1,495 @@
+/* ==========================================================================
+   Azhar Islamic Ruqyah Center — Base
+   Design tokens, reset, typography, layout primitives, motion vocabulary.
+   Theme: "light overcoming darkness" — the page warms from midnight indigo
+   toward gold and cream as the visitor descends toward shifa.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Design tokens
+   -------------------------------------------------------------------------- */
+
+:root {
+  /* --- Darkness: midnight indigo --- */
+  --ink-950: #05070f;
+  --ink-900: #0a0e1a;
+  --ink-850: #0d1222;
+  --ink-800: #10162a;
+  --ink-700: #161d38;
+  --ink-600: #1e2748;
+
+  /* --- Islamic heritage: deep emerald --- */
+  --emerald-900: #05201a;
+  --emerald-800: #082c24;
+  --emerald-700: #0f3d33;
+  --emerald-600: #17594a;
+  --emerald-400: #2e8f77;
+
+  /* --- Light: radiant gold --- */
+  --gold-700: #8a6d14;
+  --gold-600: #a8861c;
+  --gold-500: #c9a227;
+  --gold-400: #ddb849;
+  --gold-300: #e8c766;
+  --gold-200: #f2dda0;
+  --gold-100: #f8ecc9;
+
+  /* --- Warm ivory --- */
+  --ivory: #f7f2e6;
+  --ivory-200: #ece3cf;
+  --ivory-300: #d8ccb2;
+
+  /* --- Semantic surfaces --- */
+  --bg: var(--ink-900);
+  --surface-glass: rgba(255, 255, 255, 0.035);
+  --surface-glass-hi: rgba(255, 255, 255, 0.06);
+  --surface-solid: rgba(10, 14, 26, 0.86);
+
+  /* --- Semantic text (all pairings meet WCAG AA on --ink-900 or warmer) --- */
+  --text: var(--ivory);                       /* 15.8:1 on --ink-900 */
+  --text-muted: rgba(247, 242, 230, 0.74);    /*  9.9:1 */
+  --text-dim: rgba(247, 242, 230, 0.58);      /*  6.4:1 — large / secondary only */
+  --text-gold: var(--gold-300);               /*  9.1:1 */
+  --text-gold-strong: var(--gold-200);        /* 11.7:1 */
+
+  /* --- Borders & rules --- */
+  --line-gold: rgba(201, 162, 39, 0.28);
+  --line-gold-hi: rgba(232, 199, 102, 0.55);
+  --line-soft: rgba(247, 242, 230, 0.10);
+
+  /* --- Glow --- */
+  --glow-gold: 0 0 0 1px rgba(201, 162, 39, 0.22), 0 18px 60px -22px rgba(201, 162, 39, 0.42);
+  --glow-gold-hi: 0 0 0 1px rgba(232, 199, 102, 0.5), 0 26px 80px -20px rgba(201, 162, 39, 0.6);
+
+  /* --- Elevation --- */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 12px 40px -12px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 32px 90px -28px rgba(0, 0, 0, 0.75);
+
+  /* --- Typography --- */
+  --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Held separately from --font-body, which Urdu mode reassigns to Nastaliq.
+     Numerals and Latin-only runs keep this face in both languages. */
+  --font-body-latin: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-arabic: "Amiri", "Scheherazade New", "Traditional Arabic", serif;
+  --font-arabic-ui: "Cairo", "Segoe UI", sans-serif;
+  --font-urdu: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif;
+
+  /* Fluid type scale — 320px → 1440px viewport */
+  --fs-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --fs-sm: clamp(0.8125rem, 0.78rem + 0.18vw, 0.9375rem);
+  --fs-base: clamp(0.9375rem, 0.9rem + 0.22vw, 1.0625rem);
+  --fs-md: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  --fs-lg: clamp(1.25rem, 1.13rem + 0.6vw, 1.625rem);
+  --fs-xl: clamp(1.5rem, 1.28rem + 1.1vw, 2.25rem);
+  --fs-2xl: clamp(1.9rem, 1.5rem + 2vw, 3.25rem);
+  --fs-3xl: clamp(2.4rem, 1.7rem + 3.4vw, 4.75rem);
+  /* Capped so "Azhar Islamic Ruqyah Center" sets on a single line from ~1100px
+     up, leaving the calligraphy a clear band of its own above it. */
+  --fs-hero: clamp(2.35rem, 1.5rem + 3.4vw, 4.6rem);
+
+  /* Arabic runs optically small — its own, larger scale */
+  --fs-ar-sm: clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem);
+  --fs-ar-md: clamp(1.35rem, 1.15rem + 1vw, 2rem);
+  --fs-ar-lg: clamp(1.7rem, 1.3rem + 2vw, 3rem);
+
+  /* Urdu Nastaliq needs generous leading or ascenders clip */
+  --lh-urdu: 2.4;
+
+  --tracking-wide: 0.14em;
+  --tracking-wider: 0.24em;
+
+  /* --- Space scale (8px base, fluid at the top end) --- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: clamp(3rem, 2rem + 5vw, 5rem);
+  --sp-9: clamp(4rem, 2.5rem + 7vw, 7.5rem);
+  --sp-section: clamp(4.5rem, 3rem + 8vw, 9rem);
+
+  /* --- Radii --- */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 26px;
+  --r-arch: 999px 999px 18px 18px;  /* mihrab: rounded crown, squared base */
+
+  /* --- Motion --- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);      /* expo-out: confident settle */
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur-mid: 320ms;
+  --dur-slow: 620ms;
+  --dur-reveal: 900ms;
+
+  /* --- Layout --- */
+  --shell: 1180px;
+  --shell-wide: 1400px;
+  --gutter: clamp(1.15rem, 0.6rem + 2.6vw, 3rem);
+  --nav-h: 68px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+* { margin: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  /* Anchors clear the sticky navbar */
+  scroll-padding-top: calc(var(--nav-h) + var(--sp-5));
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  color: var(--text);
+  background-color: var(--ink-900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+
+  /* The journey: midnight → emerald depth → gold dawn → warm cream.
+     Painted on <body>, so it spans the full document and progresses with scroll. */
+  background-image: linear-gradient(
+    180deg,
+    #05070f   0%,
+    #0a0e1a   8%,
+    #0a0f1e  20%,
+    #0a1420  32%,
+    #08181f  44%,
+    #0a1c1e  54%,
+    #10201c  64%,
+    #16211a  72%,
+    #1d2118  80%,
+    #262218  88%,
+    #2f2617  94%,
+    #38291a 100%
+  );
+  background-attachment: scroll;
+}
+
+/* The UA rule for [hidden] is `display: none` at element-selector strength, so
+   any class that sets `display` silently defeats it. Enforce it once, here,
+   rather than remembering to guard every component that toggles `hidden`. */
+[hidden] { display: none !important; }
+
+img,
+picture,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img { height: auto; }
+
+input,
+button,
+textarea,
+select { font: inherit; color: inherit; }
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+ul, ol { list-style: none; padding: 0; }
+
+a { color: inherit; text-decoration: none; }
+
+p, li, h1, h2, h3, h4 { overflow-wrap: break-word; }
+
+:target { scroll-margin-top: calc(var(--nav-h) + var(--sp-5)); }
+
+/* --------------------------------------------------------------------------
+   3. Focus & accessibility
+   -------------------------------------------------------------------------- */
+
+:focus { outline: none; }
+
+:focus-visible {
+  outline: 2px solid var(--gold-300);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: var(--sp-3);
+  inset-inline-start: var(--sp-3);
+  z-index: 200;
+  padding: var(--sp-3) var(--sp-5);
+  background: var(--gold-500);
+  color: var(--ink-950);
+  font-weight: 600;
+  border-radius: var(--r-sm);
+  transform: translateY(-160%);
+  transition: transform var(--dur-mid) var(--ease-out);
+}
+
+.skip-link:focus-visible { transform: translateY(0); }
+
+/* --------------------------------------------------------------------------
+   4. Typography
+   -------------------------------------------------------------------------- */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  color: var(--text);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--fs-hero); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-lg); line-height: 1.25; }
+h4 { font-size: var(--fs-md); line-height: 1.35; font-weight: 600; }
+
+p { text-wrap: pretty; }
+
+/* Small-caps gold eyebrow above every section heading */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-gold);
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  width: clamp(18px, 5vw, 42px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-gold-hi));
+}
+
+.eyebrow::after { background: linear-gradient(270deg, transparent, var(--line-gold-hi)); }
+
+.lede {
+  font-size: var(--fs-md);
+  line-height: 1.75;
+  color: var(--text-muted);
+  max-width: 62ch;
+}
+
+.muted { color: var(--text-muted); }
+.dim { color: var(--text-dim); }
+
+/* Gold gradient wash for display words — falls back to solid gold */
+.gilt {
+  color: var(--gold-300);
+  background: linear-gradient(105deg, var(--gold-200) 0%, var(--gold-400) 38%, var(--gold-100) 62%, var(--gold-400) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@supports (-webkit-text-fill-color: transparent) {
+  .gilt { -webkit-text-fill-color: transparent; }
+}
+
+/* --------------------------------------------------------------------------
+   5. Arabic, Urdu & RTL
+   -------------------------------------------------------------------------- */
+
+/* Deliberately NOT `[dir="rtl"] { text-align: right }`. That is redundant —
+   `direction: rtl` already right-aligns, because the initial `text-align` is
+   `start`. Worse, it out-specifies inherited centring, which silently forced
+   every centred Qur'anic verse and Urdu translation onto the right edge of its
+   tile. Blocks that want the right edge get it from `direction` alone; blocks
+   inside a centred context stay centred, as designed. */
+
+.ar {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  unicode-bidi: isolate;
+  font-size: var(--fs-ar-md);
+  line-height: 2.1;
+  color: var(--text-gold-strong);
+  font-feature-settings: "calt" 1, "liga" 1;
+  /* Kashida justification would break tashkeel placement — keep it off */
+  text-align: center;
+}
+
+.ar-ui {
+  font-family: var(--font-arabic-ui);
+  direction: rtl;
+  unicode-bidi: isolate;
+  line-height: 1.9;
+}
+
+.ur {
+  font-family: var(--font-urdu);
+  direction: rtl;
+  unicode-bidi: isolate;
+  line-height: var(--lh-urdu);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  /* Nastaliq descends steeply; give the block room so glyphs never clip */
+  padding-block: 0.35em;
+}
+
+/* --------------------------------------------------------------------------
+   6. Layout primitives
+   -------------------------------------------------------------------------- */
+
+.shell {
+  width: 100%;
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.shell--wide { max-width: var(--shell-wide); }
+.shell--narrow { max-width: 780px; }
+
+.section {
+  position: relative;
+  padding-block: var(--sp-section);
+  scroll-margin-top: var(--nav-h);
+}
+
+.section__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-4);
+  text-align: center;
+  margin-bottom: var(--sp-8);
+}
+
+.section__head h2 { max-width: 20ch; }
+.section__head .lede { text-align: center; margin-inline: auto; }
+
+/* Tile grid — auto-fit so it reflows without media queries */
+.tiles {
+  display: grid;
+  gap: clamp(1rem, 0.6rem + 1.4vw, 1.75rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.tiles--2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+.tiles--3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+
+/* Deliberate asymmetry on wide screens — masonry feel without JS */
+@media (min-width: 900px) {
+  .tiles--feature { grid-template-columns: 1.35fr 1fr 1fr; }
+  .tiles--split { grid-template-columns: 1fr 1.1fr; align-items: start; }
+}
+
+.span-2 { grid-column: span 2; }
+.span-full { grid-column: 1 / -1; }
+
+@media (max-width: 640px) {
+  .span-2 { grid-column: 1 / -1; }
+}
+
+.stack > * + * { margin-top: var(--flow, var(--sp-4)); }
+
+/* --------------------------------------------------------------------------
+   7. Motion vocabulary — scroll reveal
+   -------------------------------------------------------------------------- */
+
+/* Reveal drives the independent `translate`/`scale` longhands rather than
+   `transform`, leaving `transform` free for the pointer tilt on tiles.
+   Both then animate simultaneously at their own durations without conflict. */
+.js .reveal {
+  opacity: 0;
+  translate: 0 26px;
+  transition:
+    opacity var(--dur-reveal) var(--ease-out),
+    translate var(--dur-reveal) var(--ease-out),
+    scale var(--dur-reveal) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, translate;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+  will-change: auto;
+}
+
+.js .reveal--scale { translate: 0 20px; scale: 0.975; }
+.js .reveal--left  { translate: -28px 0; }
+.js .reveal--right { translate: 28px 0; }
+
+/* Line-drawing reveal for the geometric dividers */
+.divider-svg path,
+.divider-svg line {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1.6s var(--ease-out);
+  transition-delay: var(--draw-delay, 0ms);
+}
+
+.is-visible .divider-svg path,
+.is-visible .divider-svg line,
+.divider-svg.is-visible path,
+.divider-svg.is-visible line {
+  stroke-dashoffset: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. Reduced motion — honour it thoroughly, not tokenistically
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Must out-specify `.js .reveal`, or reduced-motion visitors would be left
+     staring at content that never fades in. */
+  .js .reveal,
+  .reveal {
+    opacity: 1;
+    translate: none;
+    scale: none;
+  }
+
+  .divider-svg path,
+  .divider-svg line { stroke-dashoffset: 0; }
+}
