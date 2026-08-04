@@ -1233,7 +1233,7 @@
                                           "tr":  "U\u0027idhukuma bi kalimatillahit-tammah, min kulli shaytanin wa hammah, wa min kulli \u0027aynin lammah.",
                                           "en":  "I seek refuge for you both in the perfect words of Allah, from every devil and every poisonous creature, and from every envious eye.",
                                           "ur":  "میں تم دونوں کے لیے اللہ کے کامل کلمات کی پناہ چاہتا ہوں، ہر شیطان اور ہر زہریلے جانور سے، اور ہر نظرِ بد سے۔",
-                                          "src":  "Sahih al-Bukhari 3371. For one child say u\u0027idhuka; for yourself, a\u0027udhu bi kalimatillahit-tammah.",
+                                          "src":  "Sahih al-Bukhari 3371. For one child say u\u0027idhuka; for yourself, a\u0027udhu bi kalimatillahit-tammaat.",
                                           "when_en":  "Recited over children for protection, morning and evening.",
                                           "when_ur":  "حفاظت کے لیے بچوں پر پڑھی جاتی ہے، صبح و شام۔",
                                           "benefit_en":  "The Prophet صلى الله عليه وسلم sought refuge with these words for al-Hasan and al-Husayn.",
@@ -2309,6 +2309,24 @@
                                           "benefit_en":  "This is the very supplication with which the Prophet ﷺ sought Allah\u0027s protection for al-Hasan and al-Husayn, and which he attributed to Ibrahim for his sons. Seeking refuge in Allah\u0027s perfect words is a means of protection by Allah\u0027s leave. No specific numerical reward is fixed for it in the authentic hadith.",
                                           "benefit_ur":  "یہ وہی دعا ہے جس کے ذریعے نبی ﷺ حسن اور حسین رضی اللہ عنہما کے لیے اللہ کی پناہ طلب کرتے تھے، اور اسے ابراہیم علیہ السلام کے اپنے بیٹوں کے لیے پڑھنے سے منسوب کیا۔ اللہ کے کامل کلمات کی پناہ اللہ کے حکم سے حفاظت کا ذریعہ ہے۔ صحیح حدیث میں اس کے لیے کوئی مخصوص عدد یا مخصوص ثواب مقرر نہیں کیا گیا۔",
                                           "src":  "Sahih al-Bukhari"
+                                      },
+                                      {
+                                          "id":  "dua-children-2",
+                                          "name_en":  "The same refuge, for oneself",
+                                          "name_ur":  "یہی پناہ اپنے لیے",
+                                          "ar":  "أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ وَمِنْ كُلِّ عَيْنٍ لَامَّةٍ",
+                                          "tr":  "A\u0027oodhu bi-kalimaatillaahit-taammaati min kulli shaytaanin wa haammah, wa min kulli \u0027aynin laammah.",
+                                          "en":  "I seek refuge in the perfect words of Allah from every devil, every poisonous creature, and every evil, envious eye.",
+                                          "ur":  "میں اللہ کے مکمل کلمات کی پناہ مانگتا/مانگتی ہوں ہر شیطان، ہر زہریلے جانور اور ہر بری نظر سے۔",
+                                          "note_en":  "The same refuge in the first person — for a person to seek Allah\u0027s protection for himself or herself. (For children, use the Prophet\u0027s ﷺ dual wording above; for one child say u\u0027īdhuka / u\u0027īdhuki.)",
+                                          "note_ur":  "یہی پناہ پہلے شخص کے صیغے میں — تاکہ انسان اپنے لیے اللہ کی حفاظت طلب کرے۔ (بچوں کے لیے اوپر نبی ﷺ کے تثنیہ کے الفاظ استعمال کریں؛ ایک بچے کے لیے «أُعِيذُكَ / أُعِيذُكِ» کہیں۔)",
+                                          "when_en":  "Any time, especially morning and evening, to seek Allah\u0027s protection for oneself.",
+                                          "when_ur":  "کسی بھی وقت، خاص طور پر صبح و شام، اپنے لیے اللہ کی حفاظت طلب کرنے کے لیے۔",
+                                          "reps_en":  "Once.",
+                                          "reps_ur":  "ایک بار۔",
+                                          "benefit_en":  "Seeking refuge in Allah\u0027s perfect words is a means of protection by His leave.",
+                                          "benefit_ur":  "اللہ کے مکمل کلمات کی پناہ لینا اُس کے اِذن سے حفاظت کا ذریعہ ہے۔",
+                                          "src":  "Adapted from Sahih al-Bukhari 3371; cf. Sahih Muslim 2708 (a\u0027udhu bi-kalimatillah at-tammat)."
                                       }
                                   ]
                      },
