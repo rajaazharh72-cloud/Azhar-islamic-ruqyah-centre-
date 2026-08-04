@@ -41,7 +41,9 @@ foreach ($ch in $chs) {
 
   foreach ($d in $ch.duas) {
     [void]$chapters.AppendLine("  <article class=""dua"" id=""$($d.id)"">")
-    [void]$chapters.AppendLine("    <div class=""dua__label""><span class=""dua__name"">$(Pair $d.name_en $d.name_ur)</span></div>")
+    if ($d.name_en -or $d.name_ur) {
+      [void]$chapters.AppendLine("    <div class=""dua__label""><span class=""dua__name"">$(Pair $d.name_en $d.name_ur)</span></div>")
+    }
     [void]$chapters.AppendLine("    <p class=""dua__ar"" lang=""ar"" dir=""rtl"">$(Esc $d.ar)</p>")
     if ($d.tr) { [void]$chapters.AppendLine("    <p class=""dua__tr"">$(Esc $d.tr)</p>") }
     [void]$chapters.AppendLine("    <div class=""dua__rule"" aria-hidden=""true""></div>")
@@ -52,13 +54,21 @@ foreach ($ch in $chs) {
     if ($d.note_en -or $d.note_ur) {
       [void]$chapters.AppendLine("    <p class=""dua__note"">$(Pair $d.note_en $d.note_ur)</p>")
     }
-    [void]$chapters.AppendLine("    <dl class=""dua__meta"">")
-    [void]$chapters.AppendLine("      <div><dt>$(Pair $ui.when_en $ui.when_ur)</dt><dd>$(Pair $d.when_en $d.when_ur)</dd></div>")
-    if ($d.reps_en) {
-      [void]$chapters.AppendLine("      <div><dt>$(Pair $ui.reps_en $ui.reps_ur)</dt><dd>$(Pair $d.reps_en $d.reps_ur)</dd></div>")
+    $metaRows = New-Object System.Text.StringBuilder
+    if ($d.when_en -or $d.when_ur) {
+      [void]$metaRows.Append("      <div><dt>$(Pair $ui.when_en $ui.when_ur)</dt><dd>$(Pair $d.when_en $d.when_ur)</dd></div>")
     }
-    [void]$chapters.AppendLine("      <div><dt>$(Pair $ui.benefit_en $ui.benefit_ur)</dt><dd>$(Pair $d.benefit_en $d.benefit_ur)</dd></div>")
-    [void]$chapters.AppendLine("    </dl>")
+    if ($d.reps_en) {
+      [void]$metaRows.Append("      <div><dt>$(Pair $ui.reps_en $ui.reps_ur)</dt><dd>$(Pair $d.reps_en $d.reps_ur)</dd></div>")
+    }
+    if ($d.benefit_en -or $d.benefit_ur) {
+      [void]$metaRows.Append("      <div><dt>$(Pair $ui.benefit_en $ui.benefit_ur)</dt><dd>$(Pair $d.benefit_en $d.benefit_ur)</dd></div>")
+    }
+    if ($metaRows.Length -gt 0) {
+      [void]$chapters.AppendLine("    <dl class=""dua__meta"">")
+      [void]$chapters.AppendLine($metaRows.ToString())
+      [void]$chapters.AppendLine("    </dl>")
+    }
     [void]$chapters.AppendLine("    <p class=""dua__src"">$(Pair $ui.source_en $ui.source_ur)<span aria-hidden=""true"">: </span>$(Esc $d.src)</p>")
     [void]$chapters.AppendLine("  </article>")
   }
