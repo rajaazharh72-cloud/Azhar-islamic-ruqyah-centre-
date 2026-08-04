@@ -8,7 +8,7 @@ Static site — **no build step, no framework, no dependencies to install.** Pla
 HTML, modern CSS, and vanilla JavaScript. It runs by opening `index.html`, and deploys to any
 static host as-is.
 
-**Live:** https://azhar-islamic-ruqyah-centre.vercel.app
+**Live:** https://azhar-islamic-ruqyah-centre-c2oo.vercel.app
 
 ---
 
@@ -45,7 +45,7 @@ custom domain you connect.
 
    (Use the exact values from your Vercel dashboard — they are authoritative.)
 4. **Then update the origin site-wide**: find-replace
-   `https://azhar-islamic-ruqyah-centre.vercel.app` → `https://yourdomain.com` in
+   `https://azhar-islamic-ruqyah-centre-c2oo.vercel.app` → `https://yourdomain.com` in
    `index.html` (canonical, Open Graph, Twitter, JSON-LD), `robots.txt` and `sitemap.xml`, and
    redeploy. SSL is issued automatically once DNS resolves.
 

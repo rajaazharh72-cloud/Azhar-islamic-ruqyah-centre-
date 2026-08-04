@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://azhar-islamic-ruqyah-centre.vercel.app/sitemap.xml
+Sitemap: https://azhar-islamic-ruqyah-centre-c2oo.vercel.app/sitemap.xml
