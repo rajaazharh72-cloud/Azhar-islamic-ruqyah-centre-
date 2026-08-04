@@ -699,8 +699,6 @@
   color: var(--text-gold);
 }
 
-.verse--compact .verse__ar { font-size: var(--fs-ar-md); }
-.verse--compact .verse__en { font-size: var(--fs-base); font-style: normal; }
 
 /* Language label chips above each translation */
 .lang-tag {
@@ -1012,19 +1010,6 @@
    10. Adhkar cards
    -------------------------------------------------------------------------- */
 
-.dhikr { gap: var(--sp-4); }
-
-.dhikr__meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--sp-2) var(--sp-3);
-  font-size: 0.62rem;
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: var(--text-dim);
-}
-
 .chip {
   padding: 0.28rem 0.7rem;
   border-radius: 999px;
@@ -1037,45 +1022,6 @@
 .chip--emerald {
   color: #7fd6bd;
   box-shadow: inset 0 0 0 1px rgba(46, 143, 119, 0.45);
-}
-
-.dhikr__ar {
-  font-family: var(--font-arabic);
-  direction: rtl;
-  unicode-bidi: isolate;
-  font-size: var(--fs-ar-sm);
-  line-height: 2.2;
-  color: var(--gold-200);
-  text-align: right;
-  padding-block: 0.2em;
-}
-
-.dhikr__tr {
-  font-size: var(--fs-xs);
-  font-style: italic;
-  color: var(--text-dim);
-  letter-spacing: 0.01em;
-}
-
-.dhikr__en { font-size: var(--fs-sm); color: var(--text-muted); }
-
-.dhikr__ur {
-  font-family: var(--font-urdu);
-  direction: rtl;
-  unicode-bidi: isolate;
-  font-size: var(--fs-sm);
-  line-height: var(--lh-urdu);
-  color: var(--text-muted);
-  text-align: right;
-  padding-block: 0.35em;
-}
-
-.dhikr__src {
-  font-size: 0.66rem;
-  color: var(--text-dim);
-  border-top: 1px solid var(--line-soft);
-  padding-top: var(--sp-3);
-  margin-top: auto;
 }
 
 /* --------------------------------------------------------------------------
@@ -1648,7 +1594,6 @@ html[data-lang="ur"]:not(.i18n-ready) [data-i18n] { visibility: hidden; }
    -------------------------------------------------------------------------- */
 
 html[data-lang="en"] .verse__ur,
-html[data-lang="en"] .dhikr__ur { display: none; }
 
 html[data-lang="ur"] .verse__en,
 html[data-lang="ur"] .dhikr__en,
@@ -1754,8 +1699,6 @@ html[data-lang="ur"] :is(.check-list li::before, .cross-list li::before) {
 
 /* Logical text-align so the adhkar blocks follow the document direction */
 .dhikr__ar,
-.dhikr__ur { text-align: start; }
-
 /* --------------------------------------------------------------------------
    17.4 The switch transition — a soft cross-fade, never a flash
    -------------------------------------------------------------------------- */
