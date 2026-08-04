@@ -122,32 +122,6 @@
       "name": "Azhar Islamic Ruqyah Center",
       "inLanguage": "en",
       "publisher": { "@id": "https://azhar-islamic-ruqyah-centre.vercel.app/#organization" }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://azhar-islamic-ruqyah-centre.vercel.app/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is Ruqyah permissible in Islam?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — and it is from the Sunnah. The Prophet ﷺ recited upon himself and upon his Companions, was recited upon, and approved of ruqyah performed by others. The scholars are agreed on its permissibility under three conditions, gathered by Ibn Hajar in Fath al-Bari: that it be by the speech of Allah, His names and attributes; that it be in Arabic or in words of understood meaning; and that one believe it has no effect of itself, but only by Allah's decree." }
-        },
-        {
-          "@type": "Question",
-          "name": "Can Ruqyah be performed remotely?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Ruqyah is recitation and du'a, and neither requires the reciter to be in the room. Remote sessions by call or video are valid, in sha' Allah, and are often the wiser choice for sisters, for those far away, and for those too unwell to travel." }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you give amulets or ta'weez?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Not written, not tied, not worn, not hung, not buried. This includes amulets said to contain Qur'an. What we give you instead is the recitation itself, and the adhkar, so the protection lives on your tongue and in your heart, where it cannot be lost or taken." }
-        },
-        {
-          "@type": "Question",
-          "name": "Should I also see a doctor?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes, always. A great many symptoms attributed to sihr, 'ayn or jinn are in truth anaemia, thyroid disorder, epilepsy, migraine, sleep apnoea, depression, anxiety, or the effects of medication. Ruqyah and medicine are not rivals — both are means, and both work only by Allah's permission. Never stop a prescribed treatment." }
-        }
-      ]
     }
   ]
 }
@@ -314,19 +288,15 @@
 
     <nav class="nav__links" id="nav-links" data-i18n-attr="aria-label:aria.primary" aria-label="Primary">
       <a class="nav__link" href="#about" data-i18n="nav.about">About</a>
-      <a class="nav__link" href="#afflictions" data-i18n="nav.afflictions">Afflictions</a>
-      <a class="nav__link" href="#method" data-i18n="nav.method">The Method</a>
-      <a class="nav__link" href="#signs" data-i18n="nav.signs">Signs</a>
-      <a class="nav__link" href="#protection" data-i18n="nav.protection">Protection</a>
       <a class="nav__link" href="dua-book.html" data-i18n="nav.duaBook">Dua Book</a>
-      <a class="nav__link" href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a class="nav__link" href="general-information.html" data-i18n="nav.generalInfo">General Information</a>
       <a class="nav__link" href="#fees" data-i18n="nav.fees">Fees</a>
       <a class="nav__link" href="#contact" data-i18n="nav.contact">Contact</a>
 
       <button class="lang-switch lang-switch--menu" type="button" data-lang-switch aria-label="Switch language">
         <span class="lang-switch__pill" aria-hidden="true"></span>
         <span class="lang-switch__opt" data-opt="en" aria-hidden="true">EN</span>
-        <span class="lang-switch__opt" data-opt="ur" aria-hidden="true" lang="ur">اردو</span>
+        <span class="lang-switch__opt" data-opt="ur" aria-hidden="true" lang="ur">Ø§Ø±Ø¯Ùˆ</span>
       </button>
     </nav>
   </div>
@@ -334,10 +304,7 @@
 
 <main id="main">
 
-  <!-- ========================================================================
-       1 · Hero
-       ======================================================================== -->
-  <section class="hero" id="hero" aria-labelledby="hero-title">
+<section class="hero" id="hero" aria-labelledby="hero-title">
     <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
 
     <!-- Present from first paint: no blank hero, no layout shift, and this is
@@ -362,57 +329,39 @@
           <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"/></svg>
           <span data-i18n="hero.cta">Speak with us</span>
         </a>
-        <a class="btn btn--ghost btn--lg" href="#method" data-i18n="hero.method">The method</a>
+        <a class="btn btn--ghost btn--lg" href="general-information.html#method" data-i18n="hero.method">The method</a>
       </div>
     </div>
 
-    <a class="hero__scroll" href="#opening-verse" data-i18n-attr="aria-label:aria.scroll" aria-label="Scroll to the opening verse">
+    <a class="hero__scroll" href="#dua-book" data-i18n-attr="aria-label:aria.scroll" aria-label="Scroll to the opening verse">
       <span data-i18n="hero.scroll">Scroll</span>
       <i aria-hidden="true"></i>
     </a>
   </section>
 
-  <!-- ========================================================================
-       2 · Opening verse
-       ======================================================================== -->
-  <section class="section" id="opening-verse" aria-labelledby="opening-verse-title">
+  <!-- Dua Book (primary feature) -->
+  <section class="section" id="dua-book" aria-labelledby="duafeat-title">
     <div class="bloom bloom--top" aria-hidden="true"></div>
     <div class="shell shell--narrow">
-      <h2 id="opening-verse-title" class="sr-only" data-i18n="verse.openingTitle">The Qur'an is a healing and a mercy</h2>
-
-      <article class="tile tile--arch reveal">
-        <div class="verse">
-          <p class="verse__ar" lang="ar" dir="rtl">وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ ۙ وَلَا يَزِيدُ الظَّالِمِينَ إِلَّا خَسَارًا</p>
-
-          <div class="verse__rule" aria-hidden="true"></div>
-
-          <p class="verse__en" lang="en">“And We send down of the Qur'an that which is healing and mercy for the believers, but it does not increase the wrongdoers except in loss.”</p>
-
-          <p class="verse__ur" lang="ur" dir="rtl">اور ہم قرآن میں سے وہ نازل کرتے ہیں جو ایمان والوں کے لیے شفا اور رحمت ہے، اور ظالموں کو تو یہ خسارے کے سوا کسی چیز میں نہیں بڑھاتا۔</p>
-
-          <p class="verse__cite" data-i18n="verse.opening.cite">Surah Al-Isra 17:82</p>
+      <article class="tile tile--arch reveal" style="text-align:center">
+        <p class="eyebrow" data-i18n="duafeat.eyebrow">The complete collection</p>
+        <h2 id="duafeat-title" data-i18n="duafeat.title">Masnoon Duas &mdash; The Dua Book</h2>
+        <p class="lede" style="margin-inline:auto" data-i18n="duafeat.lede">43 chapters and 150 authentic supplications from the Qur'an and the Sunnah &mdash; each with Arabic, Urdu and English, an easy explanation, and a verified source. Read online, search, bookmark, print, or open on any device.</p>
+        <ul class="signs" style="max-width:34rem; margin:var(--sp-6) auto; text-align:start">
+          <li data-i18n="duafeat.f1">Morning &amp; evening adhkar, sleep, travel, protection and ruqyah</li>
+          <li data-i18n="duafeat.f2">40 Qur'anic duas and the etiquettes of supplication</li>
+          <li data-i18n="duafeat.f3">Every verse and narration verbatim and source-checked</li>
+        </ul>
+        <div class="hero__actions" style="justify-content:center">
+          <a class="btn btn--gold btn--lg" href="dua-book.html">
+            <span data-i18n="duafeat.cta">Open the Dua Book</span>
+          </a>
         </div>
       </article>
-
-      <div class="divider reveal" aria-hidden="true">
-        <svg class="divider-svg" viewBox="0 0 1200 80" preserveAspectRatio="xMidYMid meet" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-          <path pathLength="1" d="M60 40H519"/>
-          <path pathLength="1" d="M681 40H1140"/>
-          <path pathLength="1" d="M600 14 618.385 21.615 626 40 618.385 58.385 600 66 581.615 58.385 574 40 581.615 21.615Z"/>
-          <path pathLength="1" d="M600 14 607.615 32.385 626 40 607.615 47.615 600 66 592.385 47.615 574 40 592.385 32.385Z"/>
-          <path pathLength="1" d="M545 30 552.071 37.071 555 40 552.071 42.929 545 50 537.929 42.929 535 40 537.929 37.071Z"/>
-          <path pathLength="1" d="M655 30 662.071 37.071 665 40 662.071 42.929 655 50 647.929 42.929 645 40 647.929 37.071Z"/>
-          <path pathLength="1" d="M519 40 531 30M519 40 531 50"/>
-          <path pathLength="1" d="M681 40 669 30M681 40 669 50"/>
-        </svg>
-      </div>
     </div>
   </section>
 
-  <!-- ========================================================================
-       3 · About
-       ======================================================================== -->
-  <section class="section" id="about" aria-labelledby="about-title">
+<section class="section" id="about" aria-labelledby="about-title">
     <div class="ornament ornament--edge" aria-hidden="true">
       <svg viewBox="0 0 120 120" preserveAspectRatio="xMidYMid slice"><use href="#pattern-khatam"/></svg>
     </div>
@@ -448,493 +397,7 @@
     </div>
   </section>
 
-  <!-- ========================================================================
-       4 · Afflictions
-       ======================================================================== -->
-  <section class="section" id="afflictions" aria-labelledby="afflictions-title">
-    <div class="shell">
-      <div class="section__head reveal">
-        <p class="eyebrow" data-i18n="aff.eyebrow">What we treat</p>
-        <h2 id="afflictions-title" data-i18n="aff.title">Afflictions addressed by Ruqyah</h2>
-        <p class="lede" data-i18n="aff.lede">Each of these is affirmed by the Qur'an or the authentic Sunnah. None of them harms except by Allah's permission — and none of them is a mark against the one afflicted.</p>
-      </div>
-
-      <div class="tiles">
-
-        <article class="tile reveal">
-          <span class="icon-plate icon-plate--arch" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#icon-sihr"/></svg></span>
-          <div class="tile__title"><h3 data-i18n="aff.sihr.t">Black Magic</h3><span class="tile__ar" lang="ar" dir="rtl">السِّحْر</span></div>
-          <p class="tile__body" data-i18n="aff.sihr.d">Sihr is real, and the Qur'an affirms it plainly — but it harms none except by Allah's permission. It is a sin committed against you, not a stain upon you. Treatment is by the Book of Allah, patience, and Allah's decree.</p>
-          <details class="disclose">
-            <summary class="disclose__summary"><span data-i18n="aff.signsToggle">Recognised signs</span> <svg class="disclose__chev" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-chevron"/></svg></summary>
-            <div class="disclose__wrap"><div><ul class="signs disclose__panel">
-              <li data-i18n="aff.sihr.s1">Signs may include a sudden, unexplained aversion to someone previously loved, or to the home itself</li>
-              <li data-i18n="aff.sihr.s2">Persistent physical complaints that repeated medical investigation cannot account for</li>
-              <li data-i18n="aff.sihr.s3">A heaviness or blockage that settles specifically upon prayer, wudu or Qur'an recitation</li>
-              <li data-i18n="aff.sihr.s4">Long-running obstruction in provision, work or marriage without any worldly explanation</li>
-              <li data-i18n="aff.sihr.s5">Disturbed appetite, unexplained weight change, or a taste in the mouth that comes and goes</li>
-              <li data-i18n="aff.sihr.s6">Agitation, tightness in the chest or a sense of dread that lifts and returns in cycles</li>
-              <li data-i18n="aff.sihr.s7">A marked reaction — distress, drowsiness, nausea or agitation — during the recitation of Qur'an</li>
-            </ul></div></div>
-          </details>
-        </article>
-
-        <article class="tile reveal">
-          <span class="icon-plate icon-plate--arch" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#icon-ayn"/></svg></span>
-          <div class="tile__title"><h3 data-i18n="aff.ayn.t">Evil Eye</h3><span class="tile__ar" lang="ar" dir="rtl">الْعَيْن وَالْحَسَد</span></div>
-          <p class="tile__body" data-i18n="aff.ayn.d">The Prophet ﷺ affirmed that the eye is real. It may come from an enemy through envy, or from a loved one through unguarded admiration. It is among the most common afflictions and often among the most quickly relieved, in sha' Allah.</p>
-          <details class="disclose">
-            <summary class="disclose__summary"><span data-i18n="aff.signsToggle">Recognised signs</span> <svg class="disclose__chev" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-chevron"/></svg></summary>
-            <div class="disclose__wrap"><div><ul class="signs disclose__panel">
-              <li data-i18n="aff.ayn.s1">Symptoms may include a sudden decline in health, energy or fortune following praise or public attention</li>
-              <li data-i18n="aff.ayn.s2">Excessive yawning, watering eyes or heavy drowsiness during Qur'an or du'a</li>
-              <li data-i18n="aff.ayn.s3">Headaches that move about the head and resist ordinary treatment</li>
-              <li data-i18n="aff.ayn.s4">Loss of appetite, pallor, or a persistent tiredness that sleep does not repair</li>
-              <li data-i18n="aff.ayn.s5">Sudden dislike of one's own appearance, work or possessions without cause</li>
-              <li data-i18n="aff.ayn.s6">Recurrent minor accidents, breakages or setbacks clustered in a short period</li>
-              <li data-i18n="aff.ayn.s7">In children: unexplained crying, night waking, fever without illness, or a change in temperament</li>
-            </ul></div></div>
-          </details>
-        </article>
-
-        <article class="tile reveal">
-          <span class="icon-plate icon-plate--arch" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#icon-jinn-body"/></svg></span>
-          <div class="tile__title"><h3 data-i18n="aff.jinn.t">Jinn Possession of the Body</h3><span class="tile__ar" lang="ar" dir="rtl">مَسُّ الْجِنّ</span></div>
-          <p class="tile__body" data-i18n="aff.jinn.d">That a jinn may afflict a human body is affirmed by the Qur'an and the Sunnah, though it is far rarer than fear and the internet suggest. Most of what is attributed to it is medical or psychological, and must be investigated as such first.</p>
-          <details class="disclose">
-            <summary class="disclose__summary"><span data-i18n="aff.signsToggle">Recognised signs</span> <svg class="disclose__chev" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-chevron"/></svg></summary>
-            <div class="disclose__wrap"><div><ul class="signs disclose__panel">
-              <li data-i18n="aff.jinn.s1">Signs may include episodes of altered awareness with partial or no memory afterwards</li>
-              <li data-i18n="aff.jinn.s2">Strong, involuntary aversion or agitation specifically at the adhan or Qur'an</li>
-              <li data-i18n="aff.jinn.s3">Speech, movements or a voice during episodes that the person does not recognise as their own</li>
-              <li data-i18n="aff.jinn.s4">Repeated frightening dreams involving animals, being chased, falling, or the deceased</li>
-              <li data-i18n="aff.jinn.s5">Unusual physical strength, rigidity or convulsive movement during recitation</li>
-              <li data-i18n="aff.jinn.s6">Whispering, intrusive thoughts urging disbelief, despair or self-harm</li>
-              <li data-i18n="aff.jinn.s7">Pressure or constriction in the chest and throat, particularly at night</li>
-              <li data-i18n="aff.jinn.s8"><strong>Note:</strong> seizures, dissociation and several psychiatric conditions present similarly. A doctor must be seen.</li>
-            </ul></div></div>
-          </details>
-        </article>
-
-        <article class="tile reveal">
-          <span class="icon-plate icon-plate--arch" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#icon-home"/></svg></span>
-          <div class="tile__title"><h3 data-i18n="aff.home.t">Possession &amp; Disturbances of the Home</h3><span class="tile__ar" lang="ar" dir="rtl">سُكْنَى الْجِنِّ فِي الْبَيْت</span></div>
-          <p class="tile__body" data-i18n="aff.home.d">A house left empty of Qur'an and adhkar may become a place where harm settles. The Prophet ﷺ said that Shaytan flees a house in which Surat al-Baqarah is recited — the remedy begins with the household, not with the healer.</p>
-          <details class="disclose">
-            <summary class="disclose__summary"><span data-i18n="aff.signsToggle">Recognised signs</span> <svg class="disclose__chev" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-chevron"/></svg></summary>
-            <div class="disclose__wrap"><div><ul class="signs disclose__panel">
-              <li data-i18n="aff.home.s1">May include a persistent unease or oppression felt in one particular room, corner or stairway</li>
-              <li data-i18n="aff.home.s2">Sounds without source: footsteps, knocking, movement of furniture, doors opening or closing</li>
-              <li data-i18n="aff.home.s3">Odours appearing and vanishing with no origin — smoke, decay, or something sweet and heavy</li>
-              <li data-i18n="aff.home.s4">Animals or small children reacting to a space adults find unremarkable</li>
-              <li data-i18n="aff.home.s5">Sleep disturbed only in that home and restored when the family stays elsewhere</li>
-              <li data-i18n="aff.home.s6">Recurring quarrels that begin without cause and cool the moment the family leaves the house</li>
-              <li data-i18n="aff.home.s7">Electrical items, lights or taps behaving erratically after competent inspection finds no fault</li>
-            </ul></div></div>
-          </details>
-        </article>
-
-        <article class="tile reveal">
-          <span class="icon-plate icon-plate--arch" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#icon-haunting"/></svg></span>
-          <div class="tile__title"><h3 data-i18n="aff.haunt.t">Intelligent Hauntings</h3><span class="tile__ar" lang="ar" dir="rtl">الْجِنُّ الْعَابِث</span></div>
-          <p class="tile__body" data-i18n="aff.haunt.d">Some disturbances appear to respond — to speech, to entry, to a person in particular. This is not the soul of the deceased returning; the dead do not return. It is the meddling of a jinn, and it is addressed with Qur'an, not conversation.</p>
-          <details class="disclose">
-            <summary class="disclose__summary"><span data-i18n="aff.signsToggle">Recognised signs</span> <svg class="disclose__chev" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-chevron"/></svg></summary>
-            <div class="disclose__wrap"><div><ul class="signs disclose__panel">
-              <li data-i18n="aff.haunt.s1">May include disturbances that appear to react to speech, movement or the presence of one household member</li>
-              <li data-i18n="aff.haunt.s2">Objects moved, hidden or returned in a manner that seems deliberate rather than random</li>
-              <li data-i18n="aff.haunt.s3">Being touched, held down or called by name, most often between sleep and waking</li>
-              <li data-i18n="aff.haunt.s4">Escalation when the family is frightened, and quiet when the house is filled with Qur'an</li>
-              <li data-i18n="aff.haunt.s5">Apparitions taking the form of a person, child or animal, sometimes claiming to be a deceased relative</li>
-              <li data-i18n="aff.haunt.s6">One member of the household targeted consistently while others are untouched</li>
-              <li data-i18n="aff.haunt.s7"><strong>We do not speak with it, question it, or seek information from it.</strong> Any such dialogue is forbidden.</li>
-            </ul></div></div>
-          </details>
-        </article>
-
-        <article class="tile reveal">
-          <span class="icon-plate icon-plate--arch" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#icon-marital"/></svg></span>
-          <div class="tile__title"><h3 data-i18n="aff.marital.t">Domestic &amp; Marital Affairs</h3><span class="tile__ar" lang="ar" dir="rtl">التَّفْرِيقُ بَيْنَ الزَّوْجَيْن</span></div>
-          <p class="tile__body" data-i18n="aff.marital.d">The Qur'an names separation between husband and wife as the very harm sorcerers seek. Yet not every troubled marriage is bewitched — and to say otherwise is to excuse people from repentance and effort. We look honestly at both.</p>
-          <details class="disclose">
-            <summary class="disclose__summary"><span data-i18n="aff.signsToggle">Recognised signs</span> <svg class="disclose__chev" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-chevron"/></svg></summary>
-            <div class="disclose__wrap"><div><ul class="signs disclose__panel">
-              <li data-i18n="aff.marital.s1">May include love turning to sudden, causeless revulsion at the sight, voice or scent of the spouse</li>
-              <li data-i18n="aff.marital.s2">Trivial disputes that escalate beyond all proportion and are regretted immediately afterwards</li>
-              <li data-i18n="aff.marital.s3">A blanket of coldness that lifts when the spouses are apart and returns the moment they are together</li>
-              <li data-i18n="aff.marital.s4">Each spouse seeing the other in a distorted, magnified or repellent way</li>
-              <li data-i18n="aff.marital.s5">Marital intimacy obstructed with no medical cause after proper examination</li>
-              <li data-i18n="aff.marital.s6">Proposals of marriage repeatedly collapsing at the final stage without reason</li>
-              <li data-i18n="aff.marital.s7">Children in the household becoming unsettled, fearful or sleepless alongside the discord</li>
-              <li data-i18n="aff.marital.s8"><strong>Note:</strong> neglect, harshness, addiction and abuse are not sihr. They require accountability, counsel, and sometimes protection.</li>
-            </ul></div></div>
-          </details>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       5 · The Method
-       ======================================================================== -->
-  <section class="section" id="method" aria-labelledby="method-title">
-    <div class="bloom bloom--top" aria-hidden="true"></div>
-    <div class="shell">
-      <div class="section__head reveal">
-        <p class="eyebrow" data-i18n="method.eyebrow">The method</p>
-        <h2 id="method-title" data-i18n="method.title">Ruqyah Shar'iyyah, step by step</h2>
-        <p class="lede" data-i18n="method.lede">Nothing here is hidden from you. This is the whole of it, in the order it happens.</p>
-      </div>
-
-      <div class="tiles">
-        <article class="tile reveal">
-          <span class="icon-plate" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#icon-diagnosis"/></svg></span>
-          <p class="step__num">01</p>
-          <h3 data-i18n="method.s1.t">Listening first</h3>
-          <p class="tile__body" data-i18n="method.s1.b">Before a single verse is recited, we sit with you and hear the whole account — when it began, what has been tried, what the doctors have said, what the household has witnessed. Nothing is dismissed as too strange or too small. Where the picture points toward a medical or psychological cause, we will say so plainly and direct you to seek that care. Honesty at this stage protects you from years of treating the wrong thing.</p>
-        </article>
-
-        <article class="tile reveal">
-          <span class="icon-plate" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#icon-shield"/></svg></span>
-          <p class="step__num">02</p>
-          <h3 data-i18n="method.s2.t">Returning to the foundations</h3>
-          <p class="tile__body" data-i18n="method.s2.b">Ruqyah is not a substitute for what Allah has already obliged. We begin by restoring the ground beneath you: the five prayers guarded in their times, tawbah for what has passed, the morning and evening adhkar, a daily portion of Qur'an, and lawful earnings and food. Many afflictions loosen at this stage alone, before any session is held, by Allah's permission.</p>
-        </article>
-
-        <article class="tile reveal">
-          <span class="icon-plate" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#icon-recitation"/></svg></span>
-          <p class="step__num">03</p>
-          <h3 data-i18n="method.s3.t">The recitation</h3>
-          <p class="tile__body" data-i18n="method.s3.b">We recite the speech of Allah over you — al-Fatihah, Ayat al-Kursi, the closing verses of al-Baqarah, the verses concerning sihr, al-Ikhlas and the two surahs of refuge, together with the supplications authentically reported from the Prophet ﷺ. It is recited in clear Arabic, aloud, with meaning understood and intention sincere. There is no secret portion. You may record it, learn it, and recite it upon yourself thereafter.</p>
-        </article>
-
-        <article class="tile reveal">
-          <span class="icon-plate" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#icon-oil"/></svg></span>
-          <p class="step__num">04</p>
-          <h3 data-i18n="method.s4.t">The prophetic means</h3>
-          <p class="tile__body" data-i18n="method.s4.b">Alongside recitation we use only what the Sunnah affirms: blowing with a light spray of breath, water and olive oil recited over, black seed, honey, and the recorded prophetic remedies for the eye and for sihr. Nothing is worn, buried, burned or hung. Nothing is written to be carried. If a treatment cannot be traced to the Book or the Sunnah, it has no place in this center.</p>
-        </article>
-
-        <article class="tile reveal">
-          <span class="icon-plate" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#icon-home"/></svg></span>
-          <p class="step__num">05</p>
-          <h3 data-i18n="method.s5.t">Fortifying the home</h3>
-          <p class="tile__body" data-i18n="method.s5.b">Where the affliction touches the household, the household is treated. Surat al-Baqarah recited in the home, the adhkar of entering and leaving, of eating and of sleep, images and instruments of disobedience removed, and the family taught to recite for themselves. A house maintained by Qur'an does not stay easy to trouble.</p>
-        </article>
-
-        <article class="tile reveal">
-          <span class="icon-plate" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#icon-followup"/></svg></span>
-          <p class="step__num">06</p>
-          <h3 data-i18n="method.s6.t">Patience, follow-up, and handing it back to Allah</h3>
-          <p class="tile__body" data-i18n="method.s6.b">Some are relieved in a single sitting; others are given a longer road, and that road is itself a purification and a raising of rank. We follow up with you, adjust, and keep reciting. But we do not count down to a promised day, because no one on this earth knows it. The cure was never in our hands. We hold to the means and return the outcome to Ash-Shafi, and that is where peace is actually found.</p>
-        </article>
-      </div>
-
-      <!-- Permissible vs. forbidden -->
-      <div class="section__head reveal" style="margin-top: var(--sp-9)">
-        <p class="eyebrow" data-i18n="perm.eyebrow">Permissible, not sorcery</p>
-        <h2 data-i18n="perm.title">What is permitted, and what we will never do</h2>
-      </div>
-
-      <article class="tile reveal" style="margin-bottom: var(--sp-5)">
-        <p class="muted" data-i18n="perm.intro">The scholars are agreed that ruqyah is permissible — indeed recommended — when three conditions are met. Ibn Hajar al-'Asqalani gathered them in <em>Fath al-Bari</em>, his commentary on <em>Sahih al-Bukhari</em>, reporting the consensus of the scholars: that the ruqyah be by the speech of Allah, His names and His attributes; that it be in Arabic or in words whose meaning is known and understood; and that one believe it has no effect of itself, but only by the decree of Allah. Everything we do stands inside those three lines. Everything outside them we refuse, however much it is asked of us, and however desperate the request.</p>
-      </article>
-
-      <div class="contrast-grid">
-        <article class="tile tile--emerald reveal">
-          <h3 data-i18n="perm.yesTitle">What Ruqyah Shar'iyyah is</h3>
-          <ul class="check-list">
-            <li data-i18n="perm.y1">It is the speech of Allah — Qur'an recited aloud upon the afflicted, together with His beautiful names and His attributes, and the supplications authentically reported from the Prophet ﷺ.</li>
-            <li data-i18n="perm.y2">It is in clear Arabic, its meaning known to the one reciting and explained to the one receiving. Nothing unintelligible is uttered, because unintelligible speech is precisely where shirk hides.</li>
-            <li data-i18n="perm.y3">It is held to be a means and never a cause. The verse does not heal of itself; Allah heals by it. Believing otherwise is the very door the Prophet ﷺ closed.</li>
-            <li data-i18n="perm.y4">It is done openly. You may hear every word, record the session, bring a mahram or family member, and ask why any particular verse was chosen.</li>
-            <li data-i18n="perm.y5">It is free of anything the Shari'ah forbids: no isolation with a non-mahram, no touching what may not be touched, no removal of clothing, no darkness or incense or ritual staging.</li>
-            <li data-i18n="perm.y6">It is joined to obedience, not offered as an alternative to it — prayer, tawbah, adhkar, lawful earnings, and a household kept upon remembrance.</li>
-          </ul>
-        </article>
-
-        <article class="tile tile--warn reveal">
-          <h3 data-i18n="perm.noTitle">What we will never do</h3>
-          <ul class="cross-list">
-            <li data-i18n="perm.n1">We never summon, command, question, contract with, or seek the aid of jinn. This is sorcery itself, and seeking help from jinn is forbidden without exception — no matter the intention, and no matter how effective it is claimed to be.</li>
-            <li data-i18n="perm.n2">We never write, sell, tie or hang amulets, ta'weez or tama'im, nor anything containing letters, numbers, squares, symbols, or disjointed words. The Prophet ﷺ was severe regarding such things, and their harm to a person's tawhid outweighs any relief they seem to bring.</li>
-            <li data-i18n="perm.n3">We never claim knowledge of the unseen — not the name of the one who harmed you, not their whereabouts, not what will come. Whoever claims this is a fortune-teller, and the Prophet ﷺ warned of what is lost by believing him.</li>
-            <li data-i18n="perm.n4">We never counter sorcery with sorcery. Undoing a knot by means of another sorcerer, however it is dressed up, is nushrah of the forbidden kind, described by the Prophet ﷺ as being from the work of Shaytan.</li>
-            <li data-i18n="perm.n5">We never guarantee a cure, sell a number of sessions in advance as a package, or price certainty. Certainty is not ours to sell.</li>
-            <li data-i18n="perm.n6">We never tell you to stop a prescribed medical treatment, abandon a doctor, or delay urgent care. Anyone who tells you otherwise is endangering your body in the name of your religion.</li>
-          </ul>
-        </article>
-      </div>
-
-      <!-- The core verses recited -->
-      <div class="section__head reveal" style="margin-top: var(--sp-9)">
-        <p class="eyebrow" data-i18n="verses.eyebrow">What is recited</p>
-        <h2 data-i18n="verses.title">The verses at the heart of every session</h2>
-        <p class="lede" data-i18n="verses.lede">There is no secret portion. These are the foundations, and you are encouraged to learn them and recite them upon yourself.</p>
-      </div>
-
-      <div class="tiles tiles--2">
-
-        <article class="tile reveal">
-          <div class="verse verse--compact">
-            <p class="verse__ar" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ الرَّحْمَٰنِ الرَّحِيمِ مَالِكِ يَوْمِ الدِّينِ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ</p>
-            <div class="verse__rule" aria-hidden="true"></div>
-            <p class="verse__en" lang="en">In the name of Allah, the Entirely Merciful, the Especially Merciful. All praise is due to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked Your anger or of those who are astray.</p>
-            <p class="verse__ur" lang="ur" dir="rtl">اللہ کے نام سے جو نہایت مہربان، بے حد رحم فرمانے والا ہے۔ سب تعریف اللہ ہی کے لیے ہے جو تمام جہانوں کا پروردگار ہے۔ نہایت مہربان، بے حد رحم فرمانے والا۔ روزِ جزا کا مالک۔ ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد چاہتے ہیں۔ ہمیں سیدھے راستے کی ہدایت فرما۔ اُن لوگوں کے راستے کی جن پر تُو نے انعام فرمایا، نہ کہ اُن کے جن پر غضب کیا گیا اور نہ گمراہوں کے۔</p>
-            <p class="verse__cite" data-i18n="verses.fatiha.cite">Surah Al-Fatiha 1:1-7</p>
-          </div>
-          <p class="dhikr__src" data-i18n="verses.fatiha.note">The Opening itself — the Prophet ﷺ affirmed it is a ruqyah, and it begins every recitation.</p>
-        </article>
-
-        <article class="tile reveal">
-          <div class="verse verse--compact">
-            <p class="verse__ar" lang="ar" dir="rtl">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ</p>
-            <div class="verse__rule" aria-hidden="true"></div>
-            <p class="verse__en" lang="en">Allah — there is no deity except Him, the Ever-Living, the Sustainer of existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.</p>
-            <p class="verse__ur" lang="ur" dir="rtl">اللہ، اُس کے سوا کوئی معبود نہیں، وہ زندہ ہے، سب کو قائم رکھنے والا ہے۔ نہ اُسے اونگھ آتی ہے اور نہ نیند۔ آسمانوں اور زمین میں جو کچھ ہے سب اُسی کا ہے۔ کون ہے جو اُس کے حضور اُس کی اجازت کے بغیر سفارش کرے؟ وہ جانتا ہے جو اُن کے آگے ہے اور جو اُن کے پیچھے ہے، اور وہ اُس کے علم میں سے کسی چیز کا احاطہ نہیں کر سکتے مگر جتنا وہ چاہے۔ اُس کی کرسی آسمانوں اور زمین کو گھیرے ہوئے ہے، اور اُن کی حفاظت اُس پر گراں نہیں، اور وہی بلند مرتبہ، عظمت والا ہے۔</p>
-            <p class="verse__cite" data-i18n="verses.kursi.cite">Surah Al-Baqarah 2:255 — Ayat al-Kursi</p>
-          </div>
-          <p class="dhikr__src" data-i18n="verses.kursi.note">The greatest verse of the Qur'an; whoever recites it at night remains under Allah's guard, and no devil may draw near.</p>
-        </article>
-
-        <article class="tile reveal">
-          <div class="verse verse--compact">
-            <p class="verse__ar" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ مِن شَرِّ مَا خَلَقَ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ</p>
-            <div class="verse__rule" aria-hidden="true"></div>
-            <p class="verse__en" lang="en">In the name of Allah, the Entirely Merciful, the Especially Merciful. Say, “I seek refuge in the Lord of daybreak, from the evil of that which He created, and from the evil of darkness when it settles, and from the evil of the blowers in knots, and from the evil of an envier when he envies.”</p>
-            <p class="verse__ur" lang="ur" dir="rtl">اللہ کے نام سے جو نہایت مہربان، بے حد رحم فرمانے والا ہے۔ کہہ دیجیے: میں صبح کے رب کی پناہ مانگتا ہوں، ہر اُس چیز کے شر سے جو اُس نے پیدا کی، اور اندھیری رات کے شر سے جب وہ چھا جائے، اور گِرہوں میں پھونکنے والیوں کے شر سے، اور حسد کرنے والے کے شر سے جب وہ حسد کرے۔</p>
-            <p class="verse__cite" data-i18n="verses.falaq.cite">Surah Al-Falaq 113:1-5</p>
-          </div>
-          <p class="dhikr__src" data-i18n="verses.falaq.note">One of the two Mu'awwidhatayn — the direct refuge against sorcery, envy, and the harm of the night.</p>
-        </article>
-
-        <article class="tile reveal">
-          <div class="verse verse--compact">
-            <p class="verse__ar" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ النَّاسِ مَلِكِ النَّاسِ إِلَٰهِ النَّاسِ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ مِنَ الْجِنَّةِ وَالنَّاسِ</p>
-            <div class="verse__rule" aria-hidden="true"></div>
-            <p class="verse__en" lang="en">In the name of Allah, the Entirely Merciful, the Especially Merciful. Say, “I seek refuge in the Lord of mankind, the Sovereign of mankind, the God of mankind, from the evil of the retreating whisperer, who whispers into the breasts of mankind, from among the jinn and mankind.”</p>
-            <p class="verse__ur" lang="ur" dir="rtl">اللہ کے نام سے جو نہایت مہربان، بے حد رحم فرمانے والا ہے۔ کہہ دیجیے: میں لوگوں کے رب کی پناہ مانگتا ہوں، لوگوں کے بادشاہ کی، لوگوں کے معبود کی، اُس وسوسہ ڈالنے والے کے شر سے جو پیچھے ہٹ جانے والا ہے، جو لوگوں کے سینوں میں وسوسہ ڈالتا ہے، خواہ وہ جنوں میں سے ہو یا انسانوں میں سے۔</p>
-            <p class="verse__cite" data-i18n="verses.nas.cite">Surah An-Nas 114:1-6</p>
-          </div>
-          <p class="dhikr__src" data-i18n="verses.nas.note">The second of the Mu'awwidhatayn — refuge from the whisperer who retreats at the remembrance of Allah.</p>
-        </article>
-
-        <article class="tile reveal span-full">
-          <div class="verse verse--compact">
-            <p class="verse__ar" lang="ar" dir="rtl">آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ ۚ وَقَالُوا سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا ۚ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ ۖ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا ۚ أَنتَ مَوْلَانَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ</p>
-            <div class="verse__rule" aria-hidden="true"></div>
-            <p class="verse__en" lang="en">The Messenger has believed in what was revealed to him from his Lord, and so have the believers. All of them have believed in Allah and His angels and His books and His messengers, saying, “We make no distinction between any of His messengers.” And they say, “We hear and we obey. We seek Your forgiveness, our Lord, and to You is the final destination.” Allah does not charge a soul except with that within its capacity. It will have the consequence of what good it has gained, and it will bear the consequence of what evil it has earned. “Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people.”</p>
-            <p class="verse__ur" lang="ur" dir="rtl">رسول اُس پر ایمان لائے جو اُن کے رب کی طرف سے اُن پر نازل کیا گیا، اور ایمان والے بھی۔ سب اللہ پر، اُس کے فرشتوں پر، اُس کی کتابوں پر اور اُس کے رسولوں پر ایمان لائے۔ (کہتے ہیں) ہم اُس کے رسولوں میں سے کسی کے درمیان فرق نہیں کرتے۔ اور انہوں نے کہا: ہم نے سنا اور اطاعت کی۔ اے ہمارے رب! تیری بخشش چاہتے ہیں اور تیری ہی طرف لوٹ کر جانا ہے۔ اللہ کسی جان پر اُس کی طاقت سے زیادہ بوجھ نہیں ڈالتا۔ اُس نے جو نیکی کمائی اُسی کے لیے ہے اور جو برائی کمائی اُسی پر ہے۔ اے ہمارے رب! اگر ہم بھول جائیں یا خطا کر بیٹھیں تو ہماری گرفت نہ فرما۔ اے ہمارے رب! ہم پر ایسا بوجھ نہ ڈال جیسا تُو نے ہم سے پہلے لوگوں پر ڈالا تھا۔ اے ہمارے رب! ہم پر وہ بوجھ نہ ڈال جس کی ہمیں طاقت نہیں۔ اور ہم سے درگزر فرما، ہمیں بخش دے اور ہم پر رحم فرما۔ تُو ہی ہمارا مولیٰ ہے، پس کافروں کی قوم کے مقابلے میں ہماری مدد فرما۔</p>
-            <p class="verse__cite" data-i18n="verses.baqarah.cite">Surah Al-Baqarah 2:285-286</p>
-          </div>
-          <p class="dhikr__src" data-i18n="verses.baqarah.note">The closing verses of Al-Baqarah; recited at night they suffice the believer and repel every harm.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       6 · Signs & symptoms self-check
-       ======================================================================== -->
-  <section class="section" id="signs" aria-labelledby="signs-title">
-    <div class="shell">
-      <div class="section__head reveal">
-        <p class="eyebrow" data-i18n="signs.eyebrow">A private self-check</p>
-        <h2 id="signs-title" data-i18n="signs.title">Signs and symptoms</h2>
-        <p class="lede" data-i18n="signs.lede">Read gently. Tick anything you recognise. Nothing here is stored, sent, or seen by anyone — it stays in your browser, and it disappears the moment you close this page.</p>
-        <p class="privacy-note">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-lock"/></svg>
-          <span data-i18n="signs.privacy">Nothing is saved. Nothing is transmitted.</span>
-        </p>
-      </div>
-
-      <p class="lede reveal" data-i18n="signs.preamble" style="text-align:center; margin-inline:auto; margin-bottom:var(--sp-6)">
-        <strong>Please read this first.</strong> This is not a diagnosis, and it is not a test you can pass or fail. Many of these signs have ordinary medical or psychological causes — anaemia, thyroid disorder, migraine, sleep apnoea, anxiety, depression. Recognising several of them is a reason to see a doctor, and a reason to talk to us. It is not a reason to be afraid.
-      </p>
-
-      <form id="symptom-check" class="tiles" data-i18n-attr="aria-label:signs.formAria" aria-label="Private symptom self-check">
-
-        <fieldset class="tile reveal check-group" style="border:0; min-width:0">
-          <legend class="check-group__title" data-i18n="signs.g1">In the Body</legend>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g1.i1">Headaches that shift position and do not respond to ordinary treatment</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g1.i2">Persistent heaviness in the shoulders, back or lower limbs, worse in the evening</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g1.i3">Tightness or constriction in the chest, particularly between Maghrib and Fajr</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g1.i4">Numbness, tingling, or a sensation of movement beneath the skin</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g1.i5">Appetite that swings between excess and complete loss, with unexplained weight change</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g1.i6">Fatigue that sleep does not repair, present on waking</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g1.i7">Repeated medical investigations returning normal results while symptoms continue</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g1.i8">Symptoms that noticeably intensify or subside during Qur'an recitation</span></label>
-        </fieldset>
-
-        <fieldset class="tile reveal check-group" style="border:0; min-width:0">
-          <legend class="check-group__title" data-i18n="signs.g2">In the Heart &amp; Mind</legend>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g2.i1">A settled anxiety or dread with no identifiable cause</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g2.i2">Sudden aversion to people, places or work that were previously loved</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g2.i3">Difficulty concentrating on prayer or Qur'an while attention is intact elsewhere</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g2.i4">Intrusive whisperings urging despair, disbelief, or harm to oneself</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g2.i5">Anger arriving faster and larger than the situation warrants, followed by regret</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g2.i6">Feeling watched, followed, or accompanied when alone</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g2.i7">Withdrawal from family and friends, and a growing sense of being disbelieved</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g2.i8">A conviction that one is not oneself, that something has changed and cannot be named</span></label>
-        </fieldset>
-
-        <fieldset class="tile reveal check-group" style="border:0; min-width:0">
-          <legend class="check-group__title" data-i18n="signs.g3">In Sleep &amp; Dreams</legend>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g3.i1">Waking repeatedly at the same hour of the night without cause</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g3.i2">Sleep paralysis: waking aware but unable to move or speak, often with pressure on the chest</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g3.i3">Recurring dreams of snakes, dogs, black cats, or being pursued</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g3.i4">Dreams of falling from height, drowning, or being buried</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g3.i5">Dreams of the deceased calling, requesting, or delivering instructions</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g3.i6">Frightening dreams involving graveyards, ruins or unfamiliar dark houses</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g3.i7">Grinding teeth, crying out, or walking in sleep, reported by others</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g3.i8">Waking exhausted, as though the night's rest was spent rather than gained</span></label>
-        </fieldset>
-
-        <fieldset class="tile reveal check-group" style="border:0; min-width:0">
-          <legend class="check-group__title" data-i18n="signs.g4">In the Home &amp; Family</legend>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g4.i1">A room or corner of the house that consistently feels oppressive to more than one person</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g4.i2">Sounds without a source: footsteps, knocking, movement of objects at night</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g4.i3">Odours that appear and vanish with no explanation</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g4.i4">Household discord that flares without cause and settles the moment the family is elsewhere</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g4.i5">Children unsettled, fearful, or waking nightly without illness</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g4.i6">Repeated obstruction in provision, employment, or proposals of marriage</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g4.i7">Marital affection replaced by coldness or aversion with no worldly reason</span></label>
-          <label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"></span><span class="check__label" data-i18n="signs.g4.i8">The house feeling empty of barakah — food, rest and time all seeming to give less than they should</span></label>
-        </fieldset>
-
-        <div class="span-full reveal">
-          <div class="check-result">
-            <p class="check-count"><span id="check-count">0</span> <span style="font-size:var(--fs-sm); color:var(--text-dim)" data-i18n="signs.recognised">recognised</span></p>
-            <p class="muted" id="check-message" role="status" aria-live="polite" data-i18n="signs.msg0">Nothing selected yet. Take your time — read gently, and be honest with yourself.</p>
-
-            <p class="verse__ar" style="font-size:var(--fs-ar-md); max-width:30ch" lang="ar" dir="rtl">وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ</p>
-            <p class="verse__en" style="font-size:var(--fs-base)" lang="en">“And when I am ill, it is He who cures me.”</p>
-            <p class="verse__ur" lang="ur" dir="rtl">اور جب میں بیمار ہو جاؤں تو وہی مجھے شفا دیتا ہے۔</p>
-            <p class="verse__cite" data-i18n="signs.verseCite">Surah Ash-Shu'ara 26:80</p>
-
-            <div class="hero__actions">
-              <a class="btn btn--gold" href="https://wa.me/923349996864" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
-                <span data-i18n="signs.cta">Talk to us confidentially</span>
-              </a>
-              <button class="btn btn--ghost" type="button" id="check-reset" data-i18n="signs.reset">Clear my selections</button>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       7 · Protection — Hisnul Muslim
-       ======================================================================== -->
-  <section class="section" id="protection" aria-labelledby="protection-title">
-    <div class="bloom bloom--top" aria-hidden="true"></div>
-    <div class="ornament" aria-hidden="true">
-      <svg viewBox="0 0 120 120" preserveAspectRatio="xMidYMid slice"><use href="#pattern-khatam"/></svg>
-    </div>
-
-    <div class="shell">
-      <div class="section__head reveal">
-        <p class="eyebrow" data-i18n="prot.eyebrow">Fortress of the Muslim</p>
-        <h2 id="protection-title" data-i18n="prot.title">Your daily protection</h2>
-        <p class="lede" data-i18n="prot.lede">These are the fortifications the Prophet ﷺ taught. Said with presence of heart, morning and evening, they are worth more than any session — and they cost nothing but your tongue.</p>
-      </div>
-
-      <div class="tiles">
-
-        <article class="tile dhikr reveal">
-          <div class="dhikr__meta"><span class="chip" data-i18n="chip.afterPrayer">After every prayer &amp; before sleep</span><span class="chip chip--emerald" data-i18n="chip.kursi">Ayat al-Kursi</span></div>
-          <h3 data-i18n="dh.kursi.t">Ayat al-Kursi</h3>
-          <p class="dhikr__ar" lang="ar" dir="rtl">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ</p>
-          <p class="dhikr__tr">Allahu la ilaha illa Huwal-Hayyul-Qayyum. La ta'khudhuhu sinatun wa la nawm…</p>
-          <p class="dhikr__en">Allah — there is no god but He, the Ever-Living, the Sustainer of all existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? … And He is the Most High, the Most Great.</p>
-          <p class="dhikr__ur" lang="ur" dir="rtl">اللہ، اُس کے سوا کوئی معبود نہیں، وہ زندہ ہے، سب کو قائم رکھنے والا ہے۔ نہ اُسے اونگھ آتی ہے اور نہ نیند۔ آسمانوں اور زمین میں جو کچھ ہے سب اُسی کا ہے۔ اور وہی بلند مرتبہ، عظمت والا ہے۔</p>
-          <p class="dhikr__src" data-i18n="dh.kursi.src">Qur'an 2:255. “Whoever recites Ayat al-Kursi at the end of every obligatory prayer, nothing prevents him from entering Paradise except death” — an-Nasa'i, <em>'Amal al-Yawm wal-Laylah</em> 100; Ibn Hibban 2171; graded sahih by al-Albani. And before sleep: Sahih al-Bukhari 2311.</p>
-        </article>
-
-        <article class="tile dhikr reveal">
-          <div class="dhikr__meta"><span class="chip" data-i18n="chip.morningEvening">Morning &amp; Evening</span><span class="chip chip--emerald" data-i18n="chip.3x">3 times</span></div>
-          <h3 data-i18n="dh.name.t">The Name with which nothing can harm</h3>
-          <p class="dhikr__ar" lang="ar" dir="rtl">بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ</p>
-          <p class="dhikr__tr">Bismillahil-ladhi la yadurru ma'asmihi shay'un fil-ardi wa la fis-sama', wa Huwas-Sami'ul-'Alim.</p>
-          <p class="dhikr__en">In the Name of Allah, with whose Name nothing on earth or in the heaven can cause harm, and He is the All-Hearing, the All-Knowing.</p>
-          <p class="dhikr__ur" lang="ur" dir="rtl">اللہ کے نام سے، جس کے نام کے ساتھ زمین اور آسمان کی کوئی چیز نقصان نہیں پہنچا سکتی، اور وہی سب کچھ سننے والا، سب کچھ جاننے والا ہے۔</p>
-          <p class="dhikr__src" data-i18n="dh.name.src">Abu Dawud 5088; at-Tirmidhi 3388; Ibn Majah 3869. Hasan sahih. Whoever says it three times morning and evening, nothing will harm him.</p>
-        </article>
-
-        <article class="tile dhikr reveal">
-          <div class="dhikr__meta"><span class="chip" data-i18n="chip.eveningHalt">Evening &amp; on halting anywhere</span><span class="chip chip--emerald" data-i18n="chip.3x">3 times</span></div>
-          <h3 data-i18n="dh.words.t">The perfect words of Allah</h3>
-          <p class="dhikr__ar" lang="ar" dir="rtl">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</p>
-          <p class="dhikr__tr">A'udhu bi kalimatil-lahit-tammati min sharri ma khalaq.</p>
-          <p class="dhikr__en">I seek refuge in the perfect words of Allah from the evil of what He has created.</p>
-          <p class="dhikr__ur" lang="ur" dir="rtl">میں اللہ کے مکمل کلمات کی پناہ مانگتا ہوں ہر اُس چیز کے شر سے جو اُس نے پیدا کی ہے۔</p>
-          <p class="dhikr__src" data-i18n="dh.words.src">Sahih Muslim 2708 — whoever says it when he stops at a place, nothing will harm him until he departs. Also at-Tirmidhi 3437, Ibn Majah 3547.</p>
-        </article>
-
-        <article class="tile dhikr reveal">
-          <div class="dhikr__meta"><span class="chip" data-i18n="chip.morningEvening">Morning &amp; Evening</span><span class="chip chip--emerald" data-i18n="chip.7x">7 times</span></div>
-          <h3 data-i18n="dh.hasbi.t">Allah is sufficient for me</h3>
-          <p class="dhikr__ar" lang="ar" dir="rtl">حَسْبِيَ اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ</p>
-          <p class="dhikr__tr">Hasbiyallahu la ilaha illa Huwa, 'alayhi tawakkaltu wa Huwa Rabbul-'Arshil-'Azim.</p>
-          <p class="dhikr__en">Allah is sufficient for me. There is no god but He. Upon Him I place my trust, and He is the Lord of the Magnificent Throne.</p>
-          <p class="dhikr__ur" lang="ur" dir="rtl">اللہ مجھے کافی ہے، اُس کے سوا کوئی معبود نہیں، اُسی پر میں نے بھروسہ کیا، اور وہی عرشِ عظیم کا رب ہے۔</p>
-          <p class="dhikr__src" data-i18n="dh.hasbi.src">Abu Dawud 5081 (mawquf from Abu ad-Darda'); Ibn as-Sunni 71 (marfu'). Cited in <em>Hisn al-Muslim</em>; the wording is Qur'anic (9:129).</p>
-        </article>
-
-        <article class="tile dhikr reveal">
-          <div class="dhikr__meta"><span class="chip" data-i18n="chip.morningEveningSleep">Morning, Evening &amp; before sleep</span><span class="chip chip--emerald" data-i18n="chip.3xEach">3 times each</span></div>
-          <h3 data-i18n="dh.quls.t">The Three Quls</h3>
-          <p class="dhikr__ar" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ قُلْ هُوَ اللَّهُ أَحَدٌ اللَّهُ الصَّمَدُ لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ</p>
-          <p class="dhikr__ar" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ مِن شَرِّ مَا خَلَقَ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ</p>
-          <p class="dhikr__ar" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ النَّاسِ مَلِكِ النَّاسِ إِلَٰهِ النَّاسِ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ مِنَ الْجِنَّةِ وَالنَّاسِ</p>
-          <p class="dhikr__tr">Qul Huwallahu Ahad… / Qul a'udhu bi Rabbil-falaq… / Qul a'udhu bi Rabbin-nas…</p>
-          <p class="dhikr__en" data-i18n="dh.quls.en">Al-Ikhlas, Al-Falaq and An-Nas, recited three times each. Al-Falaq's mention of “those who blow upon knots” is the direct Qur'anic refuge from sihr.</p>
-          <p class="dhikr__ur" lang="ur" dir="rtl">سورۃ الاخلاص، سورۃ الفلق اور سورۃ الناس — تین تین بار۔ سورۃ الفلق میں ”گرہوں میں پھونکنے والیوں“ کا ذکر جادو سے براہِ راست قرآنی پناہ ہے۔</p>
-          <p class="dhikr__src" data-i18n="dh.quls.src">Abu Dawud 5082; at-Tirmidhi 3575 — “Recite <em>Qul Huwallahu Ahad</em> and the two Mu'awwidhatayn three times in the morning and evening; they will suffice you against everything.” Hasan sahih.</p>
-        </article>
-
-        <article class="tile dhikr reveal">
-          <div class="dhikr__meta"><span class="chip" data-i18n="chip.morningEvening">Morning &amp; Evening</span><span class="chip chip--emerald" data-i18n="chip.once">Once</span></div>
-          <h3 data-i18n="dh.istighfar.t">Sayyidul-Istighfar</h3>
-          <p class="dhikr__ar" lang="ar" dir="rtl">اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَٰهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَىٰ عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ</p>
-          <p class="dhikr__tr">Allahumma Anta Rabbi la ilaha illa Anta, khalaqtani wa ana 'abduka…</p>
-          <p class="dhikr__en">O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I abide by Your covenant and promise as best I can. I seek refuge in You from the evil of what I have done. I acknowledge before You Your favour upon me, and I acknowledge before You my sin, so forgive me — for none forgives sins except You.</p>
-          <p class="dhikr__ur" lang="ur" dir="rtl">اے اللہ! تُو ہی میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تُو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، اور میں اپنی طاقت کے مطابق تیرے عہد اور وعدے پر قائم ہوں۔ پس تُو مجھے بخش دے، کیونکہ تیرے سوا گناہوں کو کوئی نہیں بخشتا۔</p>
-          <p class="dhikr__src" data-i18n="dh.istighfar.src">Sahih al-Bukhari 6306. Whoever says it during the day with firm conviction and dies that day, he will be among the people of Paradise.</p>
-        </article>
-
-        <article class="tile dhikr reveal">
-          <div class="dhikr__meta"><span class="chip" data-i18n="chip.morning">Morning</span><span class="chip chip--emerald" data-i18n="chip.once">Once</span></div>
-          <h3 data-i18n="dh.morning.t">Entering the morning</h3>
-          <p class="dhikr__ar" lang="ar" dir="rtl">أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ. رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَٰذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَٰذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ</p>
-          <p class="dhikr__tr">Asbahna wa asbahal-mulku lillah, walhamdu lillah, la ilaha illallahu wahdahu la sharika lah…</p>
-          <p class="dhikr__en">We have entered the morning and with it all dominion belongs to Allah. All praise is for Allah. There is no god but Allah alone, with no partner. To Him belongs the dominion and to Him belongs all praise, and He is over all things capable. My Lord, I ask You for the good of this day and the good of what follows it, and I seek refuge in You from the evil of this day and the evil of what follows it.</p>
-          <p class="dhikr__ur" lang="ur" dir="rtl">ہم نے صبح کی اور تمام بادشاہی اللہ ہی کی ہو گئی، اور سب تعریف اللہ کے لیے ہے۔ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اُس کا کوئی شریک نہیں۔ اے میرے رب! میں تجھ سے اِس دن کی بھلائی مانگتا ہوں اور اُس کے بعد کی بھلائی۔</p>
-          <p class="dhikr__src" data-i18n="dh.morning.src">Sahih Muslim 2723, from 'Abdullah ibn Mas'ud. In the evening say <em>Amsayna wa amsal-mulku lillah…</em></p>
-        </article>
-
-        <article class="tile dhikr reveal">
-          <div class="dhikr__meta"><span class="chip" data-i18n="chip.forChildren">For oneself &amp; one's children</span><span class="chip chip--emerald" data-i18n="chip.againstEye">Against the eye</span></div>
-          <h3 data-i18n="dh.children.t">The Prophet's refuge for children</h3>
-          <p class="dhikr__ar" lang="ar" dir="rtl">أُعِيذُكُمَا بِكَلِمَاتِ اللَّهِ التَّامَّةِ، مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ، وَمِنْ كُلِّ عَيْنٍ لَامَّةٍ</p>
-          <p class="dhikr__tr">U'idhukuma bi kalimatillahit-tammah, min kulli shaytanin wa hammah, wa min kulli 'aynin lammah.</p>
-          <p class="dhikr__en">I seek refuge for you both in the perfect words of Allah, from every devil and every poisonous creature, and from every envious eye.</p>
-          <p class="dhikr__ur" lang="ur" dir="rtl">میں تم دونوں کے لیے اللہ کے کامل کلمات کی پناہ چاہتا ہوں، ہر شیطان اور ہر زہریلے جانور سے، اور ہر نظرِ بد سے۔</p>
-          <p class="dhikr__src" data-i18n="dh.children.src">Sahih al-Bukhari 3371. The Prophet ﷺ sought refuge for al-Hasan and al-Husayn with these words, saying that Ibrahim used them for Isma'il and Ishaq. The transmitted wording is the dual, <em>u'idhukuma</em> (for two). For one child say <em lang="ar" dir="rtl">أُعِيذُكَ</em> / <em lang="ar" dir="rtl">أُعِيذُكِ</em>; for yourself, <em lang="ar" dir="rtl">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّةِ</em>.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       8 · Testimonials
-       ======================================================================== -->
-  <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+<section class="section" id="testimonials" aria-labelledby="testimonials-title">
     <div class="shell">
       <div class="section__head reveal">
         <p class="eyebrow" data-i18n="test.eyebrow">By Allah's permission</p>
@@ -971,59 +434,7 @@
     </div>
   </section>
 
-  <!-- ========================================================================
-       9 · FAQ
-       ======================================================================== -->
-  <section class="section" id="faq" aria-labelledby="faq-title">
-    <div class="shell shell--narrow">
-      <div class="section__head reveal">
-        <p class="eyebrow" data-i18n="faq.eyebrow">Questions</p>
-        <h2 id="faq-title" data-i18n="faq.title">What people ask before they come</h2>
-      </div>
-
-      <div class="faq">
-        <details class="faq__item reveal">
-          <summary class="faq__q"><span data-i18n="faq.q1">Is Ruqyah permissible in Islam?</span> <span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p data-i18n="faq.a1">Yes — and it is from the Sunnah. The Prophet ﷺ recited upon himself and upon his Companions, was recited upon, and approved of ruqyah performed by others. The scholars are agreed on its permissibility under three conditions, gathered by Ibn Hajar in <em>Fath al-Bari</em>: that it be by the speech of Allah, His names and attributes; that it be in Arabic or in words of understood meaning; and that one believe it has no effect of itself, but only by Allah's decree. Ruqyah that meets these conditions is worship. Ruqyah that abandons them is something else entirely, whatever it is called.</p></div>
-        </details>
-
-        <details class="faq__item reveal">
-          <summary class="faq__q"><span data-i18n="faq.q2">Can Ruqyah be performed remotely?</span> <span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p data-i18n="faq.a2">Yes. Ruqyah is recitation and du'a, and neither requires the reciter to be in the room — the Prophet ﷺ supplicated for people who were absent from him. Remote sessions by call or video are valid, in sha' Allah, and are often the wiser choice for sisters, for those far away, and for those too unwell to travel. In-person sessions allow closer assessment and are preferred where the home itself is involved. Neither is more powerful than the other; the power was never in proximity.</p></div>
-        </details>
-
-        <details class="faq__item reveal">
-          <summary class="faq__q"><span data-i18n="faq.q3">What should I prepare before a session?</span> <span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p data-i18n="faq.a3">Come in a state of wudu and in modest, loose clothing. Perform your obligatory prayers on time in the days beforehand, make tawbah sincerely, and begin the morning and evening adhkar even if imperfectly. Bring a mahram or family member if you wish — you are encouraged to. Bring any medical reports or diagnoses you have. Eat lightly. Most importantly, come with your hope placed in Allah rather than in the session: it is He who cures, and He is nearer to you than the one reciting.</p></div>
-        </details>
-
-        <details class="faq__item reveal">
-          <summary class="faq__q"><span data-i18n="faq.q4">How many sessions will I need?</span> <span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p data-i18n="faq.a4">We do not know, and we will not pretend to. Some people are relieved in a single sitting; others walk a longer road, and that road carries its own reward and expiation. Anyone who tells you the number before meeting you is selling something. What we can tell you is that we will not stretch treatment out unnecessarily, we will tell you honestly if we believe ruqyah is not what your situation requires, and our aim throughout is to make you capable of reciting upon yourself so that you need us less, not more.</p></div>
-        </details>
-
-        <details class="faq__item reveal">
-          <summary class="faq__q"><span data-i18n="faq.q5">What are your fees?</span> <span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p data-i18n="faq.a5">Every figure is published openly under <a href="#fees">Fees</a> — consultation, follow-up, home visits, and how to pay — so that you know before you come and never have to ask awkwardly. The fee covers the consultation, the guidance, the time and the Ruqyah session itself, and nothing more. Scholars have permitted taking a fee for ruqyah, on the evidence of the Companion who recited al-Fatihah upon a tribal chief and whose payment the Prophet ﷺ approved. But we will never charge for a guaranteed result, sell packages of sessions in advance, or price by the severity of your fear. If cost is a barrier to you, say so — <strong>[PLACEHOLDER — insert your hardship and concession policy]</strong>.</p></div>
-        </details>
-
-        <details class="faq__item reveal">
-          <summary class="faq__q"><span data-i18n="faq.q6">Should I also see a doctor?</span> <span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p data-i18n="faq.a6">Yes, always, and we will keep saying it. The Prophet ﷺ commanded us to seek treatment, and told us that Allah sent down no illness without also sending down its cure. A great many symptoms attributed to sihr, 'ayn or jinn are in truth anaemia, thyroid disorder, epilepsy, migraine, sleep apnoea, depression, anxiety, psychosis, or the effects of medication. These are real illnesses with real treatments and no shame attached. Ruqyah and medicine are not rivals — both are means, and both work only by Allah's permission. Never stop a prescribed treatment for us or for anyone.</p></div>
-        </details>
-
-        <details class="faq__item reveal">
-          <summary class="faq__q"><span data-i18n="faq.q7">Do you give amulets or ta'weez?</span> <span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p data-i18n="faq.a7">No. Not written, not tied, not worn, not hung, not buried, not carried in a wallet or pinned to a child. This includes amulets said to contain Qur'an. The Prophet ﷺ said that whoever hangs an amulet, may Allah not fulfil his need for him — and among the Companions and the scholars who came after, the majority forbade them outright, precisely because they open a door to attaching the heart to an object instead of to Allah. What we give you instead is the recitation itself, and the adhkar, so the protection lives on your tongue and in your heart, where it cannot be lost or taken.</p></div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       10 · Fees
-       ======================================================================== -->
-  <section class="section" id="fees" aria-labelledby="fees-title">
+<section class="section" id="fees" aria-labelledby="fees-title">
     <div class="shell">
       <div class="section__head reveal">
         <p class="eyebrow" data-i18n="fees.eyebrow">Transparency</p>
@@ -1134,10 +545,7 @@
     </div>
   </section>
 
-  <!-- ========================================================================
-       11 · Contact
-       ======================================================================== -->
-  <section class="section" id="contact" aria-labelledby="contact-title">
+<section class="section" id="contact" aria-labelledby="contact-title">
     <div class="bloom bloom--top" aria-hidden="true"></div>
     <div class="shell shell--narrow">
       <article class="tile contact-tile reveal">
@@ -1189,7 +597,6 @@
       </article>
     </div>
   </section>
-
 </main>
 
 <!-- ==========================================================================

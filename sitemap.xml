@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Single-page site. The sections (#about, #afflictions, …) are anchors on the
-     one document, not separate URLs, so the sitemap lists the homepage only. -->
+<!-- Homepage, the Dua Book, and the General Information page. Section anchors
+     (#about, #fees, …) are on the homepage document, not separate URLs. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://azhar-islamic-ruqyah-centre.vercel.app/</loc>
@@ -13,5 +13,11 @@
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://azhar-islamic-ruqyah-centre.vercel.app/general-information.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
