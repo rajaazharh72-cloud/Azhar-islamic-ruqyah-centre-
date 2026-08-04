@@ -2288,6 +2288,155 @@
                                           "src":  "Sahih Muslim"
                                       }
                                   ]
+                     },
+                     {
+                         "id":  "ch-parents",
+                         "title_en":  "For One\u0027s Parents",
+                         "title_ur":  "والدین کے لیے دعا",
+                         "intro_en":  "The supplications Allah teaches for one\u0027s parents — for their mercy and forgiveness, in life and after death.",
+                         "intro_ur":  "وہ دعائیں جو اللہ اپنے والدین کے لیے سکھاتا ہے — اُن کی رحمت اور مغفرت کے لیے، زندگی میں بھی اور موت کے بعد بھی۔",
+                         "duas":  [
+                                      {
+                                          "id":  "qd-17-24",
+                                          "name_en":  "Dua for one\u0027s parents",
+                                          "name_ur":  "والدین کے لیے دعا",
+                                          "ar":  "وَٱخْفِضْ لَهُمَا جَنَاحَ ٱلذُّلِّ مِنَ ٱلرَّحْمَةِ وَقُل رَّبِّ ٱرْحَمْهُمَا كَمَا رَبَّيَانِى صَغِيرًۭا",
+                                          "en":  "And lower to them the wing of humility out of mercy and say, \"My Lord, have mercy upon them as they brought me up [when I was] small.\"",
+                                          "ur":  "اور عجزو نیاز سے ان کے آگے جھکے رہو اور ان کے حق میں دعا کرو کہ اے پروردگار جیسا انہوں نے مجھے بچپن میں (شفقت سے) پرورش کیا ہے تو بھی اُن (کے حال) پر رحمت فرما",
+                                          "note_en":  "You ask Allah to have mercy on your parents as they raised you when you were small.",
+                                          "note_ur":  "آپ اللہ سے دعا کرتے ہیں کہ آپ کے والدین پر رحم کرے جیسے انہوں نے آپ کو بچپن میں پالا۔",
+                                          "when_en":  "Regularly, for living or deceased parents.",
+                                          "when_ur":  "باقاعدگی سے، زندہ یا فوت شدہ والدین کے لیے۔",
+                                          "benefit_en":  "The very dua Allah teaches children to make for their parents, out of mercy for their upbringing.",
+                                          "benefit_ur":  "وہی دعا جو اللہ اولاد کو اپنے والدین کی پرورش کے بدلے اُن کے لیے سکھاتا ہے۔",
+                                          "src":  "Al-Qur\u0027an - Al-Israa 17:24"
+                                      },
+                                      {
+                                          "id":  "qd-14-41",
+                                          "name_en":  "Dua for oneself, parents and the believers",
+                                          "name_ur":  "اپنے، والدین اور مومنوں کے لیے دعا",
+                                          "ar":  "رَبَّنَا ٱغْفِرْ لِى وَلِوَٰلِدَىَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ ٱلْحِسَابُ",
+                                          "en":  "Our Lord, forgive me and my parents and the believers the Day the account is established.\"",
+                                          "ur":  "اے پروردگار حساب (کتاب) کے دن مجھ کو اور میرے ماں باپ کو اور مومنوں کو مغفرت کیجیو",
+                                          "note_en":  "You ask forgiveness for yourself, your parents, and the believers on the Day of Reckoning.",
+                                          "note_ur":  "آپ حساب کے دن اپنے، اپنے والدین اور مومنوں کے لیے مغفرت مانگتے ہیں۔",
+                                          "when_en":  "Regularly, especially for your parents and the Muslims.",
+                                          "when_ur":  "باقاعدگی سے، خاص طور پر والدین اور مسلمانوں کے لیے۔",
+                                          "benefit_en":  "The prayer of Ibrahim (peace be upon him), seeking forgiveness for himself, his parents, and all the believers.",
+                                          "benefit_ur":  "ابراہیم علیہ السلام کی دعا، اپنے، اپنے والدین اور تمام مومنوں کے لیے مغفرت کی درخواست۔",
+                                          "src":  "Al-Qur\u0027an - Ibrahim 14:41"
+                                      },
+                                      {
+                                          "id":  "qd-71-28",
+                                          "name_en":  "Nuh\u0027s dua for parents and the believers",
+                                          "name_ur":  "نوح علیہ السلام کی والدین اور مومنوں کے لیے دعا",
+                                          "ar":  "رَّبِّ ٱغْفِرْ لِى وَلِوَٰلِدَىَّ وَلِمَن دَخَلَ بَيْتِىَ مُؤْمِنًۭا وَلِلْمُؤْمِنِينَ وَٱلْمُؤْمِنَٰتِ وَلَا تَزِدِ ٱلظَّٰلِمِينَ إِلَّا تَبَارًۢا",
+                                          "en":  "My Lord, forgive me and my parents and whoever enters my house a believer and the believing men and believing women. And do not increase the wrongdoers except in destruction.\"",
+                                          "ur":  "اے میرے پروردگار مجھ کو اور میرے ماں باپ کو اور جو ایمان لا کر میرے گھر میں آئے اس کو اور تمام ایمان والے مردوں اور ایمان والی عورتوں کو معاف فرما اور ظالم لوگوں کے لئے اور زیادہ تباہی بڑھا",
+                                          "note_en":  "You ask Allah to forgive you, your parents, whoever enters your home as a believer, and all believing men and women.",
+                                          "note_ur":  "آپ اللہ سے دعا کرتے ہیں کہ آپ کو، آپ کے والدین کو، آپ کے گھر میں مومن ہو کر داخل ہونے والے کو، اور تمام مومن مردوں و عورتوں کو بخش دے۔",
+                                          "when_en":  "For one\u0027s parents and all believing men and women.",
+                                          "when_ur":  "اپنے والدین اور تمام مومن مردوں و عورتوں کے لیے۔",
+                                          "benefit_en":  "The prayer of Nuh (peace be upon him), seeking forgiveness for himself, his parents, and every believing man and woman.",
+                                          "benefit_ur":  "نوح علیہ السلام کی دعا، اپنے، اپنے والدین اور ہر مومن مرد و عورت کے لیے مغفرت کی درخواست۔",
+                                          "src":  "Al-Qur\u0027an - Nuh 71:28"
+                                      }
+                                  ]
+                     },
+                     {
+                         "id":  "ch-rizq",
+                         "title_en":  "Provision (Rizq)",
+                         "title_ur":  "رزق کی دعا",
+                         "intro_en":  "Asking Allah for beneficial knowledge, good lawful provision, and accepted deeds — part of the Prophet\u0027s ﷺ morning supplication.",
+                         "intro_ur":  "اللہ سے نفع بخش علم، پاکیزہ حلال رزق اور مقبول عمل کی دعا — جو نبی کریم ﷺ کی صبح کی دعا کا حصہ ہے۔",
+                         "duas":  [
+                                      {
+                                          "id":  "dua-rizq-1",
+                                          "name_en":  "Asking Allah for Beneficial Knowledge, Good Provision, and Accepted Deeds",
+                                          "name_ur":  "نفع بخش علم، پاکیزہ رزق اور مقبول عمل کی دعا",
+                                          "ar":  "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً",
+                                          "en":  "O Allah, I ask You for beneficial knowledge, good (lawful) provision, and accepted deeds.",
+                                          "ur":  "اے اللہ! میں تجھ سے نفع بخش علم، پاکیزہ (حلال) رزق اور مقبول عمل کا سوال کرتا ہوں۔",
+                                          "note_en":  "The Prophet ﷺ used to make this supplication in the morning. In three short phrases it asks for the good of both this life and the next: knowledge that actually benefits (and is acted upon), provision that is \u0027tayyib\u0027 — pure, wholesome, and earned lawfully — and righteous deeds that Allah accepts. \u0027Good provision\u0027 here is not merely wealth, but sustenance free of anything unlawful.",
+                                          "note_ur":  "نبی کریم ﷺ یہ دعا صبح کے وقت پڑھا کرتے تھے۔ تین مختصر جملوں میں دنیا و آخرت دونوں کی بھلائی مانگی گئی ہے: ایسا علم جو حقیقتاً نفع دے اور جس پر عمل ہو، ایسا رزق جو \u0027طیب\u0027 یعنی پاکیزہ، ستھرا اور حلال طریقے سے حاصل ہو، اور ایسے نیک اعمال جو اللہ کے ہاں قبول ہوں۔ یہاں \u0027پاکیزہ رزق\u0027 سے مراد صرف مال نہیں بلکہ ہر حرام سے پاک روزی ہے۔",
+                                          "when_en":  "In the morning, after praying Fajr. It is part of the Prophet\u0027s ﷺ morning remembrance (adhkar).",
+                                          "when_ur":  "صبح کے وقت، نمازِ فجر کے بعد۔ یہ نبی کریم ﷺ کے صبح کے اذکار میں سے ہے۔",
+                                          "reps_en":  "Recited once in the morning after the Fajr prayer, as it comes in the narration; no other count is fixed.",
+                                          "reps_ur":  "روایت کے مطابق ایک بار صبح نمازِ فجر کے بعد پڑھی جائے؛ اس کے علاوہ کوئی گنتی مقرر نہیں۔",
+                                          "benefit_en":  "The narration does not fix a specific numbered reward for this supplication. Its virtue is that it is an established Sunnah of the Prophet ﷺ, who chose these very words for his morning remembrance, and that it is a comprehensive request gathering the best of this world and the Hereafter: knowledge that benefits, lawful sustenance, and deeds Allah accepts.",
+                                          "benefit_ur":  "اس دعا کے لیے روایت میں کوئی خاص متعین اجر یا گنتی مذکور نہیں۔ اس کی فضیلت یہ ہے کہ یہ نبی کریم ﷺ کی ثابت شدہ سنت ہے، آپ ﷺ نے اپنے صبح کے ذکر کے لیے یہی الفاظ چنے، اور یہ ایک جامع دعا ہے جو دنیا و آخرت کی بہترین بھلائی کو یکجا کرتی ہے: نفع بخش علم، حلال رزق اور مقبول اعمال۔",
+                                          "src":  "Sunan Ibn Majah"
+                                      }
+                                  ]
+                     },
+                     {
+                         "id":  "ch-tawbah",
+                         "title_en":  "Repentance",
+                         "title_ur":  "توبہ",
+                         "intro_en":  "Turning back to Allah: Sayyid al-Istighfar — the master supplication for seeking forgiveness — and the repentance the Prophet ﷺ used to repeat in a single sitting.",
+                         "intro_ur":  "اللہ کی طرف رجوع: سیّد الاستغفار — مغفرت طلب کرنے کی سب سے افضل دعا — اور وہ توبہ جو نبی کریم ﷺ ایک مجلس میں بار بار دہراتے تھے۔",
+                         "duas":  [
+                                      {
+                                          "id":  "dua-tawbah-1",
+                                          "name_en":  "Sayyid al-Istighfar — The Master Supplication for Seeking Forgiveness",
+                                          "name_ur":  "سیّدُ الاِستِغفار — مغفرت طلب کرنے کی سب سے افضل دعا",
+                                          "ar":  "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَٰهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَىٰ عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
+                                          "en":  "O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I hold to Your covenant and Your promise as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge before You Your favour upon me, and I acknowledge before You my sin; so forgive me, for none forgives sins except You.",
+                                          "ur":  "اے اللہ! تُو ہی میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تُو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، اور میں اپنی طاقت کے مطابق تیرے عہد اور تیرے وعدے پر قائم ہوں۔ میں اپنے کیے ہوئے (اعمال) کے شر سے تیری پناہ مانگتا ہوں۔ میں تیری اُس نعمت کا اعتراف کرتا ہوں جو تُو نے مجھ پر فرمائی، اور اپنے گناہ کا بھی اعتراف کرتا ہوں؛ پس تُو مجھے بخش دے، کیونکہ تیرے سوا گناہوں کو کوئی نہیں بخشتا۔",
+                                          "note_en":  "This is called Sayyid al-Istighfar, \u0027the master of seeking forgiveness\u0027 — the most complete way to ask Allah\u0027s pardon. In it the servant affirms Allah\u0027s Lordship and Oneness, renews his covenant of servitude, admits both Allah\u0027s blessings and his own sins, and asks only Allah for forgiveness.",
+                                          "note_ur":  "اسے سیّدُ الاِستِغفار یعنی ’’استغفار کا سردار‘‘ کہا جاتا ہے — اللہ سے مغفرت مانگنے کا سب سے جامع طریقہ۔ اس میں بندہ اللہ کی ربوبیت اور توحید کا اقرار کرتا ہے، بندگی کے عہد کی تجدید کرتا ہے، اللہ کی نعمتوں اور اپنے گناہوں دونوں کو تسلیم کرتا ہے، اور صرف اللہ ہی سے بخشش مانگتا ہے۔",
+                                          "when_en":  "Recite once in the morning (after Fajr) and once in the evening; it may also be said generally whenever seeking Allah\u0027s forgiveness.",
+                                          "when_ur":  "صبح (فجر کے بعد) ایک بار اور شام کو ایک بار پڑھیں؛ نیز عمومی طور پر جب بھی اللہ سے مغفرت مانگنی ہو، پڑھی جا سکتی ہے۔",
+                                          "reps_en":  "Once in the morning and once in the evening — the well-established practice in the morning and evening adhkar.",
+                                          "reps_ur":  "صبح ایک مرتبہ اور شام ایک مرتبہ — یہ صبح و شام کے اذکار کا معروف و ثابت معمول ہے۔",
+                                          "benefit_en":  "The Prophet ﷺ said: whoever says it during the day with firm conviction and dies that day before evening will be among the people of Paradise, and whoever says it at night with firm conviction and dies before morning will be among the people of Paradise. (Sahih al-Bukhari)",
+                                          "benefit_ur":  "نبی ﷺ نے فرمایا: جو شخص اسے دن میں پختہ یقین کے ساتھ پڑھے اور اُسی دن شام سے پہلے فوت ہو جائے تو وہ جنتیوں میں سے ہوگا، اور جو اسے رات میں پختہ یقین کے ساتھ پڑھے اور صبح سے پہلے فوت ہو جائے تو وہ (بھی) جنتیوں میں سے ہوگا۔ (صحیح بخاری)",
+                                          "src":  "Sahih al-Bukhari"
+                                      },
+                                      {
+                                          "id":  "dua-tawbah-2",
+                                          "name_en":  "Rabb ighfir li wa tub \u0027alayya — The Prophet\u0027s ﷺ Repeated Repentance in a Sitting",
+                                          "name_ur":  "رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ — نبی ﷺ کی ایک مجلس میں بار بار کی جانے والی توبہ",
+                                          "ar":  "رَبِّ اغْفِرْ لِي، وَتُبْ عَلَيَّ، إِنَّكَ أَنْتَ التَّوَّابُ الغَفُورُ",
+                                          "en":  "My Lord, forgive me and accept my repentance; indeed You are the Ever-Relenting (Accepter of repentance), the All-Forgiving.",
+                                          "ur":  "اے میرے رب! مجھے بخش دے اور میری توبہ قبول فرما؛ بے شک تُو ہی بہت توبہ قبول کرنے والا، بہت بخشنے والا ہے۔",
+                                          "note_en":  "A short, easy supplication asking both for forgiveness of past sins and for the acceptance of one\u0027s repentance. It calls upon Allah by two of His beautiful names: at-Tawwab (the One who constantly turns to His servants accepting their repentance) and al-Ghafur (the All-Forgiving).",
+                                          "note_ur":  "ایک مختصر اور آسان دعا جس میں گزشتہ گناہوں کی معافی اور توبہ کی قبولیت دونوں کی درخواست کی گئی ہے۔ اس میں اللہ کو اُس کے دو خوبصورت ناموں سے پکارا گیا ہے: التَّوَّاب (بندوں کی توبہ بار بار قبول کرنے والا) اور الغَفُور (بہت بخشنے والا)۔",
+                                          "when_en":  "At any time, especially in gatherings and sittings, and whenever turning back to Allah in repentance; the Prophet ﷺ used to repeat it frequently in a single sitting.",
+                                          "when_ur":  "ہر وقت، خاص طور پر مجلسوں اور نشستوں میں، اور جب بھی اللہ کی طرف توبہ کرتے ہوئے رجوع کیا جائے؛ نبی ﷺ ایک ہی مجلس میں اسے کثرت سے دہراتے تھے۔",
+                                          "reps_en":  "The Prophet ﷺ would say it up to a hundred times in a single sitting (as reported by Ibn \u0027Umar); it may be repeated freely.",
+                                          "reps_ur":  "نبی ﷺ ایک ہی مجلس میں سو مرتبہ تک یہ پڑھتے تھے (جیسا کہ حضرت ابن عمر رضی اللہ عنہ سے مروی ہے)؛ اسے کثرت سے دہرایا جا سکتا ہے۔",
+                                          "benefit_en":  "No separate fixed reward is narrated for this exact wording. Its established virtue is that it was the Prophet\u0027s ﷺ own habitual repentance: Ibn \u0027Umar (may Allah be pleased with him) reported that they would count the Messenger of Allah ﷺ saying it a hundred times in a single sitting. Repeating it is therefore a direct following of his Sunnah and a means of seeking Allah\u0027s forgiveness, which He promises to grant. (Jami\u0027 at-Tirmidhi; Sunan Ibn Majah)",
+                                          "benefit_ur":  "اِن مخصوص الفاظ کے لیے کوئی جدا مقررہ اجر روایت نہیں۔ اس کی ثابت شدہ فضیلت یہ ہے کہ یہ خود نبی ﷺ کی معمول کی توبہ تھی: حضرت ابن عمر رضی اللہ عنہ سے مروی ہے کہ وہ رسول اللہ ﷺ کو ایک ہی مجلس میں سو مرتبہ یہ پڑھتے ہوئے شمار کرتے تھے۔ لہٰذا اسے دہرانا براہِ راست آپ ﷺ کی سنت کی پیروی اور اللہ سے مغفرت طلب کرنے کا ذریعہ ہے، جس کی وہ قبولیت کا وعدہ فرماتا ہے۔ (جامع ترمذی؛ سنن ابن ماجہ)",
+                                          "src":  "Jami\u0027 at-Tirmidhi; Sunan Ibn Majah"
+                                      }
+                                  ]
+                     },
+                     {
+                         "id":  "ch-ruqyah",
+                         "title_en":  "Ruqyah (Healing Recitation)",
+                         "title_ur":  "رقیہ (شفا کی دم)",
+                         "intro_en":  "Reciting over oneself or a sick person for healing and protection by Allah\u0027s leave. Al-Fatihah, Ayat al-Kursi, and the three Quls (given earlier) are the greatest ruqyah — recite them, then this supplication.",
+                         "intro_ur":  "اللہ کے اِذن سے شفا اور حفاظت کے لیے اپنے آپ پر یا بیمار پر دم کرنا۔ سورۃ الفاتحہ، آیت الکرسی اور تینوں قُل (جو پہلے درج ہیں) سب سے بڑی دم ہیں — انہیں پڑھ کر پھر یہ دعا پڑھیں۔",
+                         "duas":  [
+                                      {
+                                          "id":  "dua-ruqyah-1",
+                                          "name_en":  "The Prophetic Ruqyah — Bismillahi arqik (In the Name of Allah I recite over you)",
+                                          "name_ur":  "نبوی دم و رقیہ — بِسْمِ اللَّهِ أَرْقِيكَ (اللہ کے نام سے میں تم پر دم کرتا ہوں)",
+                                          "ar":  "بِسْمِ اللَّهِ أَرْقِيكَ، مِنْ كُلِّ شَيْءٍ يُؤْذِيكَ، مِنْ شَرِّ كُلِّ نَفْسٍ أَوْ عَيْنِ حَاسِدٍ، اللَّهُ يَشْفِيكَ، بِسْمِ اللَّهِ أَرْقِيكَ",
+                                          "en":  "In the Name of Allah I recite over you (performing ruqyah), from everything that harms you, from the evil of every soul or every envious eye. May Allah cure you. In the Name of Allah I recite over you.",
+                                          "ur":  "اللہ کے نام سے میں تم پر دم کرتا ہوں، ہر اُس چیز سے جو تمہیں تکلیف پہنچائے، ہر (بدخواہ) نفس یا حاسد کی نظر کے شر سے۔ اللہ تمہیں شفا عطا فرمائے۔ اللہ کے نام سے میں تم پر دم کرتا ہوں۔",
+                                          "note_en":  "Ruqyah means reciting the words of Allah and authentic Prophetic supplications over oneself or a sick person, seeking healing and protection from Allah alone. These are the very words that the angel Jibril recited over the Prophet ﷺ when he was unwell (Sahih Muslim). The one reciting is only a means; the cure comes from Allah — note the words \u0027Allah cures you.\u0027",
+                                          "note_ur":  "رقیہ (دم) کا مطلب ہے اپنے آپ پر یا کسی بیمار پر اللہ کا کلام اور نبی ﷺ سے ثابت شدہ دعائیں پڑھ کر پھونکنا، اور اللہ ہی سے شفا و حفاظت طلب کرنا۔ یہی وہ کلمات ہیں جو جبریل علیہ السلام نے نبی ﷺ کی علالت کے وقت آپ ﷺ پر پڑھے تھے (صحیح مسلم)۔ پڑھنے والا صرف ذریعہ ہے، شفا اللہ ہی کی طرف سے ہے — الفاظ ملاحظہ ہوں: ’اللہ تمہیں شفا دے‘۔",
+                                          "when_en":  "Recite it over a sick or suffering person, or over yourself, at any time of need — during illness, pain, or when affected by the evil eye or envy. It is customary to blow lightly and, if easy, to pass the hand over the place of pain.",
+                                          "when_ur":  "کسی بیمار یا تکلیف زدہ شخص پر، یا اپنے آپ پر، حاجت کے وقت پڑھیں — بیماری، درد، یا نظرِ بد اور حسد کے اثر کے وقت۔ ہلکی پھونک مارنا اور آسانی ہو تو درد کی جگہ پر ہاتھ پھیرنا مستحب ہے۔",
+                                          "reps_en":  "Recited over the affected person; the hadith does not fix a specific number, so it may be repeated as needed. Reciting three times is a common and acceptable practice.",
+                                          "reps_ur":  "متاثرہ شخص پر پڑھا جاتا ہے؛ حدیث میں کوئی خاص تعداد مقرر نہیں، لہٰذا حسبِ ضرورت دہرایا جا سکتا ہے۔ تین بار پڑھنا عام اور جائز عمل ہے۔",
+                                          "benefit_en":  "An authentic Prophetic means of healing and protection by Allah\u0027s permission — from every harm, and specifically from the evil eye and the envier. It is established in Sahih Muslim that the angel Jibril recited these exact words over the Prophet ﷺ during his illness. No fixed numerical reward is reported for it in the texts; its value is that it is a proven Sunnah cure sought from Allah alone.",
+                                          "benefit_ur":  "یہ اللہ کے حکم سے شفا اور حفاظت کا ثابت شدہ نبوی ذریعہ ہے — ہر تکلیف سے، اور خاص طور پر نظرِ بد اور حاسد کے شر سے۔ صحیح مسلم میں ثابت ہے کہ جبریل علیہ السلام نے نبی ﷺ کی علالت میں یہی الفاظ آپ ﷺ پر پڑھے۔ اس کے لیے نصوص میں کوئی مقررہ عددی اجر بیان نہیں ہوا؛ اس کی فضیلت یہی ہے کہ یہ ثابت شدہ سنت علاج ہے جو صرف اللہ سے مانگا جاتا ہے۔",
+                                          "src":  "Sahih Muslim"
+                                      }
+                                  ]
                      }
                  ]
 }
