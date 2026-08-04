@@ -3,19 +3,19 @@
      (#about, #fees, …) are on the homepage document, not separate URLs. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://azhar-islamic-ruqyah-centre-c2oo.vercel.app/</loc>
+    <loc>https://azhar-islamic-ruqyah-centre-ta6q.vercel.app/</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://azhar-islamic-ruqyah-centre-c2oo.vercel.app/dua-book.html</loc>
+    <loc>https://azhar-islamic-ruqyah-centre-ta6q.vercel.app/dua-book.html</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://azhar-islamic-ruqyah-centre-c2oo.vercel.app/general-information.html</loc>
+    <loc>https://azhar-islamic-ruqyah-centre-ta6q.vercel.app/general-information.html</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
