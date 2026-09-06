@@ -654,7 +654,7 @@
 }
 
 .verse__ar {
-  font-family: var(--font-arabic);
+  font-family: var(--font-quran);
   direction: rtl;
   unicode-bidi: isolate;
   font-size: var(--fs-ar-lg);

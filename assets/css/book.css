@@ -276,11 +276,11 @@ html[data-lang="ur"] .dua__name { font-family: var(--font-urdu); line-height: 1.
 .dua__badges { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-inline-start: auto; }
 
 .dua__ar {
-  font-family: var(--font-arabic);
+  font-family: var(--font-quran);
   direction: rtl;
   unicode-bidi: isolate;
   font-size: var(--fs-ar-md);
-  line-height: 2.3;
+  line-height: 2.35;
   color: var(--gold-100);
   text-align: center;
   padding-block: 0.3em;
