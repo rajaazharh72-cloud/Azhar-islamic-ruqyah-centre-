@@ -98,7 +98,7 @@ window.I18N = (function () {
     'fees.initial': 'ابتدائی مشورہ',
     'fees.followup': 'بعد کی نشست',
     'fees.home': 'گھر پر حاضری',
-    'fees.mins30': '30 منٹ',
+    'fees.mins15': '15 منٹ',
     'fees.asRequired': 'ضرورت کے مطابق',
     'fees.byArrangement': 'باہمی طے کے مطابق',
     'fees.byDistance': 'فاصلے کے مطابق، مشورے کے بعد بتائی جائے گی',
