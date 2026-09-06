@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Azhar Islamic Ruqyah Center — Interaction layer
+   Azhar Islamic Ruqyah Centre — Interaction layer
    Vanilla JS, no dependencies. The Three.js hero is loaded lazily and
    separately so this file stays small and blocks nothing.
    ========================================================================== */

@@ -42,7 +42,7 @@ foreach ($ch in $chs) {
   foreach ($d in $ch.duas) {
     [void]$chapters.AppendLine("  <article class=""dua"" id=""$($d.id)"">")
     if ($d.name_en -or $d.name_ur) {
-      [void]$chapters.AppendLine("    <div class=""dua__label""><span class=""dua__name"">$(Pair $d.name_en $d.name_ur)</span></div>")
+      [void]$chapters.AppendLine("    <div class=""dua__label""><h3 class=""dua__name"">$(Pair $d.name_en $d.name_ur)</h3></div>")
     }
     [void]$chapters.AppendLine("    <p class=""dua__ar"" lang=""ar"" dir=""rtl"">$(Esc $d.ar)</p>")
     if ($d.tr) { [void]$chapters.AppendLine("    <p class=""dua__tr"">$(Esc $d.tr)</p>") }
@@ -73,7 +73,7 @@ foreach ($ch in $chs) {
     [void]$chapters.AppendLine("  </article>")
   }
 
-  [void]$chapters.AppendLine("  <nav class=""chapter__nav"" aria-label=""Chapter navigation"">")
+  [void]$chapters.AppendLine("  <div class=""chapter__nav"">")
   if ($n -gt 1) {
     $prev = $chs[$n-2]
     [void]$chapters.AppendLine("    <a href=""#$($prev.id)""><svg viewBox=""0 0 24 24"" aria-hidden=""true"" style=""rotate:180deg""><use href=""#i-chevron""/></svg>$(Pair $ui.prev_en $ui.prev_ur)</a>")
@@ -86,7 +86,7 @@ foreach ($ch in $chs) {
   } else {
     [void]$chapters.AppendLine("    <a href=""#book-intro"" hidden></a>")
   }
-  [void]$chapters.AppendLine("  </nav>")
+  [void]$chapters.AppendLine("  </div>")
   [void]$chapters.AppendLine("</section>")
 }
 

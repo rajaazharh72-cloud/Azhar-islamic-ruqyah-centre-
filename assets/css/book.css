@@ -231,7 +231,14 @@ html[data-lang="ur"] .book-toc__label { letter-spacing: normal; text-transform: 
 .book-intro p { color: var(--text-muted); max-width: 64ch; margin-bottom: var(--sp-4); }
 .book-intro .lede { color: var(--text); }
 
-.chapter { scroll-margin-top: calc(var(--nav-h) + 80px); margin-bottom: var(--sp-9); }
+.chapter {
+  scroll-margin-top: calc(var(--nav-h) + 80px);
+  margin-bottom: var(--sp-9);
+  /* Skip layout/paint for off-screen chapters (43 of them). Keeps first paint
+     and scrolling cheap; the reserved size limits scrollbar jump. */
+  content-visibility: auto;
+  contain-intrinsic-size: 0 1200px;
+}
 .chapter__head { text-align: center; margin-bottom: var(--sp-7); }
 .chapter__num {
   display: inline-block;
@@ -264,7 +271,7 @@ html[data-lang="ur"] .chapter__title { font-family: var(--font-urdu); line-heigh
 .dua__label {
   display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--sp-3);
 }
-.dua__name { font-family: var(--font-display); font-size: var(--fs-md); font-weight: 600; color: var(--ivory); }
+.dua__name { margin: 0; font-family: var(--font-display); font-size: var(--fs-md); font-weight: 600; color: var(--ivory); }
 html[data-lang="ur"] .dua__name { font-family: var(--font-urdu); line-height: 1.9; }
 .dua__badges { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-inline-start: auto; }
 

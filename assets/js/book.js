@@ -139,6 +139,7 @@
     if (!noResults) {
       noResults = document.createElement('p');
       noResults.className = 'book-noresults';
+      noResults.setAttribute('role', 'status');
       noResults.hidden = true;
       content.appendChild(noResults);
     }

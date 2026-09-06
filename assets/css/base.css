@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Azhar Islamic Ruqyah Center — Base
+   Azhar Islamic Ruqyah Centre — Base
    Design tokens, reset, typography, layout primitives, motion vocabulary.
    Theme: "light overcoming darkness" — the page warms from midnight indigo
    toward gold and cream as the visitor descends toward shifa.
@@ -85,7 +85,7 @@
   --fs-xl: clamp(1.5rem, 1.28rem + 1.1vw, 2.25rem);
   --fs-2xl: clamp(1.9rem, 1.5rem + 2vw, 3.25rem);
   --fs-3xl: clamp(2.4rem, 1.7rem + 3.4vw, 4.75rem);
-  /* Capped so "Azhar Islamic Ruqyah Center" sets on a single line from ~1100px
+  /* Capped so "Azhar Islamic Ruqyah Centre" sets on a single line from ~1100px
      up, leaving the calligraphy a clear band of its own above it. */
   --fs-hero: clamp(2.35rem, 1.5rem + 3.4vw, 4.6rem);
 
